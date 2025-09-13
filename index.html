@@ -307,17 +307,23 @@ footer small {
 
 /* Icon buttons */
 .nav-btn {
-  width: 45px;
-  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
+  background: rgb(243, 183, 20);
+  color: #4a2b11;
+  font-size: 18px;
   border: none;
-  background: #e07b39; /* warm terracotta */
-  color: #fff;
-  font-size: 1.2rem;
-  transition: 0.3s;
+  text-decoration: none; /* remove underline for <a> */
+  transition: all 0.3s ease;
 }
+
 .nav-btn:hover {
-  background: #d35400;
+  background: #ffe0b3;
+  color: #d35400;
 }
 
 /* Labels below icons */
@@ -370,33 +376,46 @@ footer small {
     </div>
   </div>
 
-  <!-- Nav icons -->
-  <nav class="nav-icons">
-    <div class="nav-item">
-      <button class="nav-btn"><i class="fa-solid fa-house"></i></button>
-      <div class="nav-label">Home</div>
-    </div>
-    <div class="nav-item">
-      <button class="nav-btn"><i class="fa-solid fa-users"></i></button>
-      <div class="nav-label">About Us</div>
-    </div>
-    <div class="nav-item">
-      <button class="nav-btn"><i class="fa-solid fa-plus"></i></button>
-      <div class="nav-label">Ministries</div>
-    </div>
-    <div class="nav-item">
-      <button class="nav-btn"><i class="fa-solid fa-photo-film"></i></button>
-      <div class="nav-label">Media & Catrery</div>
-    </div>
-    <div class="nav-item">
-      <button class="nav-btn"><i class="fa-solid fa-handshake"></i></button>
-      <div class="nav-label">Partners</div>
-    </div>
-    <div class="nav-item">
-      <button class="nav-btn"><i class="fa-solid fa-envelope"></i></button>
-      <div class="nav-label">Contact Us</div>
-    </div>
-  </nav>
+<!-- Nav icons -->
+<nav class="nav-icons">
+  <div class="nav-item">
+    <a href="#" class="nav-btn">
+      <i class="fa-solid fa-house"></i>
+    </a>
+    <div class="nav-label">Home</div>
+  </div>
+  <div class="nav-item">
+    <a href="#" class="nav-btn">
+      <i class="fa-solid fa-users"></i>
+    </a>
+    <div class="nav-label">About Us</div>
+  </div>
+  <div class="nav-item">
+    <a href="#" class="nav-btn">
+      <i class="fa-solid fa-plus"></i>
+    </a>
+    <div class="nav-label">Ministries</div>
+  </div>
+  <div class="nav-item">
+    <a href="#" class="nav-btn">
+      <i class="fa-solid fa-photo-film"></i>
+    </a>
+    <div class="nav-label">Media & Catrery</div>
+  </div>
+  <div class="nav-item">
+    <a href="#" class="nav-btn">
+      <i class="fa-solid fa-handshake"></i>
+    </a>
+    <div class="nav-label">Partners</div>
+  </div>
+  <div class="nav-item">
+    <a href="#" class="nav-btn">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <div class="nav-label">Contact Us</div>
+  </div>
+</nav>
+
 </header>
   <!-- HERO / Landing -->
   <main id="home">
@@ -724,5 +743,3 @@ footer small {
   </script>
 </body>
 </html>
-
-
