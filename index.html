@@ -421,13 +421,59 @@ footer small, footer div {
   <div class="container py-2 d-flex align-items-center justify-content-between">
     <!-- Brand -->
     <div class="brand-logo d-flex align-items-center gap-2">
-      <div class="brand-mark"><i class="fa-solid fa-crown"></i></div>
-      <div>
+  <div class="brand-mark">
+    <img src="logo.jpg" alt="Cross & Crown Logo" class="brand-logo-img">
+  </div>
     <div class="brand-title">Cross & Crown</div>
 <div style="font-size:1.2rem; color:#3efc25; opacity:0.9"><b>Children & Youth</b></div>
       </div>
     </div>
   </div>
+
+  <style>/* Logo styling */
+.brand-logo-img {
+  width: 56px;   /* adjust as needed */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Text next to logo */
+.brand-title {
+  font-family: 'Comic Neue', 'Fredoka One', sans-serif; /* playful but bold */
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #4a2b11;
+}
+
+.brand-subtitle {
+  font-size: 0.8rem;
+  color: #3b3b3b;
+  opacity: 0.9;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .brand-logo-img {
+    width: 44px;
+  }
+  .brand-title {
+    font-size: 1rem;
+  }
+  .brand-subtitle {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo-img {
+    width: 36px;
+  }
+  .brand-title {
+    font-size: 0.9rem;
+  }
+}
+</style>
 
 <!-- Nav icons -->
 <nav class="nav-icons">
