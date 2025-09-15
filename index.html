@@ -98,13 +98,7 @@ h2, h4 {
     .brand-logo {
       display:flex; align-items:center; gap:10px; color:#7b3b12;
     }
-    .brand-mark{
-      width:46px; height:46px;
-      border-radius:10px;
-      background:linear-gradient(135deg,#f2a03f,#d66d2e);
-      display:flex;align-items:center;justify-content:center;color:white;font-weight:800;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    }
+  
 
     /* HERO slider */
     .hero {
@@ -324,37 +318,30 @@ footer small, footer div {
   flex-direction: column;
   min-height: 105px;  /* ensure space for icons + labels */
 }
-
 /* Nav container */
 .nav-icons {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start; 
-  overflow-x: auto;
-  padding: 0.2rem 0.4rem;       /* more breathing space */
+  justify-content: space-around;   /* evenly space items */
+  align-items: flex-start;
+  padding: 0.2rem 0.4rem;
   height: auto;
-  background: rgba(255, 255, 255, 0.2); /* semi-transparent overlay */
-  border-radius: 12px;          /* 🔑 rounded corners */
-  margin: 0.5rem;               /* space around the container */
-  backdrop-filter: blur(6px);   /* 🔑 modern frosted effect */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  margin: 0.5rem;
+  backdrop-filter: blur(6px);
+  flex-wrap: nowrap;   /* keep in one row */
+  overflow-x: hidden;  /* disable scrolling */
 }
-.nav-icons::-webkit-scrollbar {
-  display: none;
-}
-
 
 /* Each nav item */
 .nav-item {
-  flex: 1 1 auto;
+  flex: 1;                   /* take equal space */
   text-align: center;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 80px; /* ensures room for label */
+  min-height: 70px;
 }
 
 /* Icon buttons */
@@ -362,14 +349,14 @@ footer small, footer div {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
+  width: clamp(28px, 8vw, 50px);   /* auto resize */
+  height: clamp(28px, 8vw, 50px);
   border-radius: 50%;
   background: rgb(243, 183, 20);
   color: #4a2b11;
-  font-size: 18px;
+  font-size: clamp(14px, 3vw, 18px);
   border: none;
-  text-decoration: none; /* remove underline for <a> */
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -380,38 +367,15 @@ footer small, footer div {
 
 /* Labels below icons */
 .nav-label {
-  display: block;            /* 🔑 ensure always visible */
+  display: block;
   margin-top: 6px;
-  color: #fff;               /* white for contrast on peach bg */
+  color: #fff;
   font-weight: 600;
-  font-size: clamp(0.65rem, 2vw, 0.9rem); /* 🔑 shrinks with screen */
-  line-height: 1.3;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.25); /* 🔑 makes it pop */
-  white-space: nowrap; 
+  font-size: clamp(0.55rem, 2vw, 0.85rem); /* auto shrink */
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  white-space: normal; /* allow wrapping instead of cutting */
 }
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .nav-btn {
-    width: 38px;
-    height: 38px;
-    font-size: 1rem;
-  }
-  .nav-item {
-    min-height: 70px;
-  }
-}
-@media (max-width: 480px) {
-  .nav-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 0.9rem;
-  }
-  .nav-item {
-    min-height: 65px;
-  }
-}
-
   </style>
 </head>
 <body>
@@ -429,7 +393,7 @@ footer small, footer div {
     </div>
   </div>
   <section class="tagline text-center py-3">
-  <h2>Disciplining Young Hearts, Mentoring Leaders</h2>
+  <h2>"Discipling Young hearts,mentoring leaders"</h2>
 </section>
 
   <style>/* Logo styling */
@@ -493,21 +457,15 @@ footer small, footer div {
   </div>
   <div class="nav-item">
     <a href="#" class="nav-btn">
-      <i class="fa-solid fa-plus"></i>
-    </a>
-    <div class="nav-label">Ministries</div>
-  </div>
-  <div class="nav-item">
-    <a href="#" class="nav-btn">
       <i class="fa-solid fa-photo-film"></i>
     </a>
-    <div class="nav-label">Media & Catrery</div>
+    <div class="nav-label">Media & Gallery</div>
   </div>
   <div class="nav-item">
-    <a href="#" class="nav-btn">
+    <a href="patners.html" class="nav-btn">
       <i class="fa-solid fa-handshake"></i>
     </a>
-    <div class="nav-label">Partners</div>
+    <div class="nav-label">School Partners</div>
   </div>
   <div class="nav-item">
     <a href="#" class="nav-btn">
@@ -565,16 +523,156 @@ footer small, footer div {
       </div>
 
       <div class="hero-overlay">
-        <h1>WELCOME TO CROSS &amp; CROWN</h1>
-        <p class="lead"><b>Where children and young people grow in Christ through discipleship, mentorship, storytelling, creativity, and compassion.</b></p>
-        <div>
-          <button class="btn-team" onclick="location.href='#team'">Meet Our Team</button>
-        </div>
-      </div>
+  <h1 class="welcome-title">🌟 Welcome to Cross & Crown Ministries</h1>
+  
+  <div class="welcome-text">
+    <p><em>Here at Cross & Crown, we believe every child is radiant, gifted, and called.  
+    We walk with them—through discipleship, creativity, and compassion—so they can rise in faith and flourish in purpose.</em></p>
 
+    <p>Whether you're a mentor, a parent, a partner, or a seeker, you've found a place where hearts are nurtured, stories are honored, and Christ is at the center of it all.</p>
+
+    <p><strong>Together, we build. Together, we protect. Together, we shine.</strong></p>
+
+    <p>We value your feedback, input, and suggestions. Feel free to write to us—we’ll be glad to reach out and walk with you.  
+    You can use the contact form on this site, or write to us directly at  
+    <a href="mailto:info@crossandcrown.org">info@crossandcrown.org</a> or <a href="mailto:info@crossandcrown.com">info@crossandcrown.com</a>.</p>
+
+    <p><strong>God bless you.</strong></p>
+  </div>
+
+  <div>
+    <button class="btn-team" onclick="location.href='#team'">Meet Our Team</button>
+  </div>
+</div>
       <!-- slider dots -->
       <div class="hero-controls" id="heroDots"></div>
     </section>
+    <style> 
+      .welcome-title {
+  font-family: 'Fredoka One', sans-serif; /* playful, kid-friendly font */
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #f5a623; /* warm golden tone */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+}
+
+.welcome-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+  max-width: 750px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+.welcome-text p {
+  margin-bottom: 14px;
+}
+
+.welcome-text em {
+  color: #444;
+  font-style: italic;
+}
+
+.welcome-text strong {
+  color: #b23a48; /* warm deep red accent */
+}
+
+.welcome-text a {
+  color: #2b8fb8;
+  text-decoration: underline;
+  font-weight: bold;
+}
+    </style>
+
+    <!-- Founder Message Section -->
+<section class="founder-message my-5">
+  <div class="container">
+    <div class="message-box p-4 p-md-5">
+      <h2 class="founder-title">✨ Message from the Founder</h2>
+
+      <div class="founder-text">
+        <p><em>“Cross & Crown was born from a deep conviction: that every child deserves to be seen, protected, and empowered through faith.  
+        What began as a whisper from God became a movement—one rooted in discipleship, creativity, and compassion.  
+        I’ve watched girls rise in courage, mentors grow in grace, and communities transform through simple acts of walking together. I have witnessed children born in the slums transform, excel and become change makers in their own families and communities. I believe every child carries spiritual capacity far beyond what the world often sees. They are capable of deep faith, radiant creativity, and powerful leadership when nurtured with love and truth. This ministry exists to walk with them—to affirm their gifts, protect their stories, and disciple them into the fullness of who God created them to be.  
+        Whether through mentorship, sports, music, storytelling, or compassion, we create spaces where children rise in courage and shine in purpose. And I believe every girl—regardless of her background, status, or ability—has the potential to become a great leader and a bold change-maker in her community.  
+        When we walk with her, affirm her gifts, and disciple her with compassion, we unlock something eternal.  
+        If you’re here, you’re part of that story. Please reach out to us, tell us which pillar you align to, support us in any way:</em></p>
+
+        <ul>
+          <li>Drop us an encouragement note.</li>
+          <li>Pray with us.</li>
+          <li>Donate to our ministry. <em>No amount is small.</em></li>
+          <li>Go (become a mentor / discipler / volunteer teacher or trainer). We welcome you all.</li>
+          <li>Sponsor one child or more.</li>
+        </ul>
+
+        <p><em>In any way possible, you have a space in our home. We welcome you with love.</em></p>
+
+        <!-- Founder Image + Name -->
+        <div class="founder-info mt-4 text-center">
+          <img src="founder.jpg" alt="Founder Image" class="founder-img">
+          <h5 class="mt-3">Emmanuel Godfrey Ogoma (Founder)</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.founder-message {
+  background: #fff7f0; /* warm soft peach backdrop */
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.message-box {
+  background: #fff;
+  border-radius: 12px;
+}
+
+.founder-title {
+  font-family: 'Fredoka One', sans-serif;
+  color: #f5a623;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.founder-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.founder-text ul {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.founder-text ul li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #444;
+}
+
+.founder-info h5 {
+  font-weight: bold;
+  color: #b23a48; /* warm accent for name */
+}
+
+.founder-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f5a623;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+</style>
 
     <!-- ABOUT placeholder -->
     <section id="about" class="container core-section">
@@ -824,9 +922,10 @@ footer small, footer div {
       <div class="col-md-4 mb-4">
         <h5>Quick Links</h5>
         <a href="statement.html">Our Statement of Faith</a>
-        <a href="mentor.html">Become a Mentor</a>
-        <a href="privacy.html">Safeguarding Information</a>
-        <a href="privacy.html">Our Privacy Policy</a>
+        <a href="mentor-form.html">Become a Mentor</a>
+         <a href="mentor-form.html">Ready to walk with her</a>
+        <a href="resources.html">Resources</a>
+        <a href="privacy.html">Privacy & Data Protection Policy</a>
       </div>
 
       <div class="col-md-4 mb-4">
