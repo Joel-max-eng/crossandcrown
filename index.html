@@ -482,109 +482,74 @@ footer small, footer div {
     <a href="tel:+254720453556" class="contact-btn call">
       <i class="fa-solid fa-phone"></i>
     </a>
-    <div class="contact-label">Call Us</div>
+    <div class="contact-label">CALL US</div>
   </div>
+
+  <div class="divider"></div>
 
   <div class="contact-item">
     <a href="mailto:info@crossandcrown.org" class="contact-btn email">
       <i class="fa-solid fa-envelope"></i>
     </a>
-    <div class="contact-label">Email Us</div>
+    <div class="contact-label">EMAIL US</div>
   </div>
 
+  <div class="divider"></div>
+
   <div class="contact-item">
-    <!-- Trigger modal instead of link -->
     <button class="contact-btn location" onclick="openMap()">
       <i class="fa-solid fa-location-dot"></i>
     </button>
-    <div class="contact-label">Find Us</div>
+    <div class="contact-label">FIND US</div>
   </div>
 </div>
+
+<!-- Quick Links Title -->
+<div class="quick-links-title">Quick Links</div>
 
 <!-- Modal for Google Map -->
 <div id="mapModal" class="map-modal">
   <div class="map-content">
     <span class="map-close" onclick="closeMap()">&times;</span>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.196662103849!2d35.14020097396392!3d1.0114456625722217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1781a7d22469a059%3A0x581457864034bfb!2sSt%20Mark&#39;s%20Boys%20High%20School%20Cherengani%20Kitale!5e0!3m2!1sen!2ske!4v1757995375545!5m2!1sen!2ske" 
-      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+    <div id="mapContainer"></div>
   </div>
 </div>
 
-</div>
-<style> 
-  /* Modal background */
-.map-modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.7);
-}
-
-/* Modal content */
-.map-content {
-  background: #fff;
-  margin: auto;
-  padding: 10px;
-  border-radius: 10px;
-  max-width: 700px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  position: relative;
-}
-
-/* Close button */
-.map-close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  color: #333;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.map-close:hover {
-  color: red;
-}
-
-</style>
-<script>
-function openMap() {
-  document.getElementById("mapModal").style.display = "block";
-}
-function closeMap() {
-  document.getElementById("mapModal").style.display = "none";
-}
-</script>
-
-<style> 
-  /* Contact quick links container */
+<!-- ================= STYLES ================= -->
+<style>
+/* Contact quick links container */
 .contact-icons {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: nowrap;   /* force single row */
   margin: 0.6rem;
-  padding: 0.4rem 0.6rem;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
+  padding: 0.6rem 0.8rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow-x: auto; /* allow scroll if too tight */
 }
 
-/* Each item */
+/* Divider line */
+.divider {
+  width: 1px;
+  background: #000; /* dark black */
+  margin: 0 8px;
+  height: 45px;
+  flex-shrink: 0;   /* don’t collapse */
+  align-self: center;
+}
+
+/* Keep items small enough for phones */
 .contact-item {
   flex: 1 1 auto;
   text-align: center;
-  min-width: 80px;
+  min-width: 60px;
 }
 
-/* Buttons (circle) */
+
+/* Icon buttons */
 .contact-btn {
   display: flex;
   align-items: center;
@@ -594,17 +559,18 @@ function closeMap() {
   border-radius: 50%;
   font-size: 22px;
   color: #fff;
-  transition: all 0.3s ease;
   margin: auto;
+  transition: all 0.3s ease;
 }
 
-/* Different colors per icon */
+/* Colors */
 .contact-btn.call {
   background: #28a745; /* green */
 }
 .contact-btn.email {
-  background: linear-gradient(135deg, #e53935, #1ce42c); /* red + white */
-  color: #b71c1c;
+  background: linear-gradient(135deg, #ff0000, #ffffff); /* red + white */
+  color: #000;
+  border: 1px solid #c62828;
 }
 .contact-btn.location {
   background: #d32f2f; /* pure red */
@@ -616,12 +582,23 @@ function closeMap() {
   font-weight: 600;
   font-size: clamp(0.7rem, 2vw, 0.9rem);
   color: #161515;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
-/* Hover */
+/* Hover effect */
 .contact-btn:hover {
   transform: scale(1.08);
+}
+
+/* Quick Links Title */
+.quick-links-title {
+  background: #b71c1c; /* deep red */
+  color: #fff;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  border-radius: 0 0 8px 8px;
+  margin: -0.4rem 0.6rem 0; /* align with container */
 }
 
 /* Responsive tweaks */
@@ -640,7 +617,76 @@ function closeMap() {
   }
 }
 
+/* ================= MODAL ================= */
+.map-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+  animation: fadeIn 0.3s ease;
+}
+
+.map-content {
+  background: #fff;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 700px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+  animation: slideDown 0.4s ease;
+}
+
+/* Close button */
+.map-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.map-close:hover {
+  color: red;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes slideDown {
+  from {transform: translateY(-40px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
 </style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+function openMap() {
+  document.getElementById("mapModal").style.display = "block";
+  document.getElementById("mapContainer").innerHTML = `
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.196662103849!2d35.14020097396392!3d1.0114456625722217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1781a7d22469a059%3A0x581457864034bfb!2sSt%20Mark&#39;s%20Boys%20High%20School%20Cherengani%20Kitale!5e0!3m2!1sen!2ske!4v1757995375545!5m2!1sen!2ske" 
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  `;
+}
+
+function closeMap() {
+  document.getElementById("mapModal").style.display = "none";
+  document.getElementById("mapContainer").innerHTML = ""; // remove iframe when closed
+}
+</script>
+
 <style> 
   /* Tagline Styling */
 .tagline {
@@ -1165,21 +1211,54 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <!-- Pillars navbar-style row -->
 <div class="pillars-navbar d-flex justify-content-around align-items-center my-4">
-  <div class="pillar-item text-center">
-    <img src="https://cdn-icons-png.flaticon.com/512/8674/8674423.png" alt="Discipleship">
-    <div class="pillar-label">DISCIPLESHIP</div>
-  </div>
+  
+  <!-- Discipleship -->
+ <div class="pillar-item text-center">
+  <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" 
+       alt="Discipleship" style="width:60px; height:60px;">
+  <div class="pillar-label">DISCIPLESHIP</div>
+</div>
 
-  <div class="pillar-item text-center">
-    <img src="https://cdn-icons-png.flaticon.com/512/10829/10829293.png" alt="Mentorship & Coaching">
-    <div class="pillar-label">MENTORSHIP & COACHING</div>
-  </div>
 
+  <!-- Mentorship & Coaching -->
+<div class="pillar-item text-center">
+  <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png" 
+       alt="Mentorship & Coaching" style="width:60px; height:60px;">
+  <div class="pillar-label">MENTORSHIP & COACHING</div>
+</div>
+
+
+
+  <!-- Compassion -->
   <div class="pillar-item text-center">
-    <img src="https://cdn-icons-png.flaticon.com/512/4144/4144747.png" alt="Compassion">
+    <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" 
+         alt="Compassion" style="width:60px;height:60px;">
     <div class="pillar-label">COMPASSION</div>
   </div>
 </div>
+
+<!-- Styling -->
+<style>
+.pillars-navbar {
+  gap: 1rem;
+}
+
+.pillar-item img {
+  max-width: 65px;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+.pillar-item img:hover {
+  transform: scale(1.1);
+}
+
+.pillar-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #2b2b2b;
+}
+</style>
 
   <!-- Button -->
   <div class="text-center">
@@ -1353,6 +1432,7 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="col-md-4 mb-4">
         <h5>Quick Links</h5>
         <a href="statement.html">Our Statement of Faith</a>
+        <a href="disciple.html">Ready to Disicple?</a>
         <a href="mentor.html">Become a Mentor</a>
         <a href="resources.html">Resources</a>
         <a href="privacy.html">Privacy & Data Protection Policy</a>
@@ -1363,14 +1443,13 @@ document.addEventListener("DOMContentLoaded", function() {
         <a href="#">Donate an Instrument</a>
         <a href="#">Donate a Bicycle</a>
         <a href="#">Donate / Give</a>
-        <a href="#">Contact Us</a>
       </div>
 
       <div class="col-md-4 mb-4">
         <h5>Connect With Us</h5>
         <div class="mb-2">
-          <div><strong>Phone:</strong> +254 712 345 678</div>
-          <div><strong>Email:</strong> crossandcrown@crossandcrown.org</div>
+          <div><strong>Phone:</strong> +254-720-453-556</div>
+          <div><strong>Email:</strong>info@crossandcrown.org</div>
         </div>
         <div class="social-icons">
   <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
@@ -1379,7 +1458,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
 
         <div class="mt-3">
-          <small>Address: 123  Street, Nairobi, Kenya</small>
+          <small>Kitale , Cherangani,near St marks Boys, Kenya</small>
         </div>
       </div>
     </div>

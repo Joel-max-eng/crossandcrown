@@ -98,6 +98,8 @@ h2, h4 {
     .brand-logo {
       display:flex; align-items:center; gap:10px; color:#7b3b12;
     }
+  
+
     /* HERO slider */
     .hero {
       min-height: 58vh;
@@ -316,7 +318,6 @@ footer small, footer div {
   flex-direction: column;
   min-height: 105px;  /* ensure space for icons + labels */
 }
-
 /* Nav container */
 .nav-icons {
   display: flex;
@@ -375,7 +376,6 @@ footer small, footer div {
   text-shadow: 0 1px 2px rgba(0,0,0,0.25);
   white-space: normal; /* allow wrapping instead of cutting */
 }
-
   </style>
 </head>
 <body>
@@ -393,7 +393,7 @@ footer small, footer div {
     </div>
   </div>
   <section class="tagline text-center py-3">
-  <h2>"Discipling Young Hearts, Mentoring Leaders"</h2>
+  <h2>"Discipling Young hearts,mentoring leaders"</h2>
 </section>
 
   <style>/* Logo styling */
@@ -475,6 +475,7 @@ footer small, footer div {
   </div>
 </nav>
 </header>
+
  <!-- Contact Quick Links -->
 <div class="contact-icons">
   <div class="contact-item">
@@ -696,7 +697,7 @@ function closeMap() {
 
 .tagline h2 {
   font-family: 'Fredoka One', 'Comic Neue', sans-serif; /* kid-friendly bold font */
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 900;
   color: #fff; /* warm orange */
   text-decoration: none;
@@ -717,112 +718,194 @@ function closeMap() {
 }
 
 </style>
-     <!-- Statement of Faith Section -->
-<!-- Statement of Faith Section -->
-<section class="statement-container">
-  <div class="statement-card">
-    <h2>✨ <span>Our Statement of Faith</span> ✨</h2>
-    <p>
-      At <strong>Cross & Crown Ministries</strong>, we believe in the 
-      <span class="highlight">transforming power of Jesus Christ</span> 
-      and the call to raise children and young people in 
-      <strong>glory and grace</strong>.
-    </p>
+ <!-- 🌿 Discipler Sign-Up Form -->
+<section id="discipler-form" class="container my-5">
+  <div class="form-card shadow p-4 rounded">
+    <div class="text-center mb-4">
+      <img src="logo.jpg" alt="Cross & Crown Logo" style="width:60px;height:60px;">
+      <h2 class="mt-2">🌿 Cross & Crown Ministries</h2>
+      <h4 class="text-muted">✨ Discipler Sign-Up Form</h4>
+      <p><em>“You don’t need to be perfect—just present.”</em></p>
+    </div>
 
-    <h3>🕊 <span>We Believe:</span></h3>
-    <ul>
-      <li>🌟 <strong>In One God</strong> — Father, Son, and Holy Spirit — eternal, holy, and sovereign.</li>
-      <li>✝️ <strong>In Jesus Christ</strong>, the Son of God, who lived, died, and rose again.</li>
-      <li>📖 <strong>In the Bible</strong> as the inspired Word of God.</li>
-      <li>💖 <strong>In Salvation by Grace</strong>, through faith in Jesus Christ.</li>
-      <li>🔥 <strong>In the Power of the Holy Spirit</strong>, who equips us to live boldly and serve faithfully.</li>
-      <li>🤝 <strong>In the Church</strong>, the body of Christ, called to unity and discipleship.</li>
-      <li>👧👦 <strong>In the Dignity of Every Child</strong>, created in God’s image, full of purpose and joy.</li>
-    </ul>
+    <form id="disciplerSignUp">
+      <!-- Personal Info -->
+      <h5>👤 Personal Information</h5>
+      <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-control" name="fullName" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-control" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Phone Number</label>
+        <input type="text" class="form-control" name="phone">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Preferred Method of Contact</label><br>
+        <label><input type="checkbox" name="contactMethod" value="Email"> Email</label> 
+        <label><input type="checkbox" name="contactMethod" value="Phone"> Phone</label> 
+        <label><input type="checkbox" name="contactMethod" value="WhatsApp"> WhatsApp</label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Church or School Affiliation (if any)</label>
+        <input type="text" class="form-control" name="affiliation">
+      </div>
 
-    <h3>🌱 <span>Our Mission in Faith:</span></h3>
-    <ul>
-      <li>🚴 To disciple and mentor <strong>young people</strong> to discover their talents and grow in faith.</li>
-      <li>🌸 To raise <strong>girls in spiritual identity</strong> and creative expression.</li>
-      <li>🎓 To equip <strong>mentors</strong> with clarity, compassion, and biblical truth.</li>
-      <li>🎶 To build <strong>radiant communities</strong> rooted in worship, service, and unity.</li>
-    </ul>
+      <!-- Preferences -->
+      <h5>🌱 Discipleship Preferences</h5>
+      <div class="mb-3">
+        <label class="form-label">Age Group You Feel Called to Disciple</label><br>
+        <label><input type="checkbox" name="ageGroup" value="8–11"> 8–11 years</label> 
+        <label><input type="checkbox" name="ageGroup" value="12–15"> 12–15 years</label> 
+        <label><input type="checkbox" name="ageGroup" value="16–18"> 16–18 years</label> 
+        <label><input type="checkbox" name="ageGroup" value="Any"> Open to any age</label>
+      </div>
 
-    <p class="closing">
-      🌍 We walk in faith—not just in belief, but in <strong>action</strong>.  
-      Every flyer, every lesson, every bicycle or instrument donated is a reflection of 
-      <span class="highlight">God’s love in motion.</span>
-    </p>
+      <div class="mb-3">
+        <label class="form-label">Ministry Area You’re Most Drawn To</label><br>
+        <label><input type="checkbox" name="ministryArea" value="Discipleship"> Discipleship</label><br>
+        <label><input type="checkbox" name="ministryArea" value="Mentorship & Coaching"> Mentorship & Coaching</label><br>
+        <label><input type="checkbox" name="ministryArea" value="Arts & Creativity"> Arts & Creativity</label><br>
+        <label><input type="checkbox" name="ministryArea" value="Compassion"> Compassion</label><br>
+        <label><input type="checkbox" name="ministryArea" value="Bible Storytelling"> Bible Storytelling</label>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Availability</label><br>
+        <label><input type="checkbox" name="availability" value="Weekly"> Weekly</label> 
+        <label><input type="checkbox" name="availability" value="Biweekly"> Biweekly</label> 
+        <label><input type="checkbox" name="availability" value="Monthly"> Monthly</label> 
+        <label><input type="checkbox" name="availability" value="Other"> Other</label>
+      </div>
+
+      <!-- Safeguarding -->
+      <h5>🛡 Safeguarding Commitment</h5>
+      <blockquote class="small text-muted">
+        Every child deserves to feel safe, seen, and protected.
+      </blockquote>
+      <div class="mb-3">
+        <label>
+          <input type="checkbox" name="safeguarding" required>
+          I have read and agree to the 
+          <a href="safeguarding.pdf" target="_blank">Safeguarding & Protection Commitment</a>.
+        </label>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Signature</label>
+        <input type="text" class="form-control" name="signature">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Date</label>
+        <input type="date" class="form-control" name="date">
+      </div>
+
+      <!-- Tell Us More -->
+      <h5>💬 Tell Us More</h5>
+      <textarea class="form-control mb-3" rows="4" name="tellUsMore"
+        placeholder="Why do you feel called to disciple? What gifts or experiences do you bring?"></textarea>
+
+      <!-- Stay Connected -->
+      <h5>📬 Stay Connected</h5>
+      <div class="mb-3">
+        <label><input type="checkbox" name="stayConnected" value="Yes"> I’d like to receive updates, training invitations, and encouragement from Cross & Crown.</label>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-success px-4 py-2">✨ Submit Sign-Up</button>
+      </div>
+    </form>
+
+    <!-- Final Blessing -->
+    <div class="text-center mt-4">
+      <blockquote class="fst-italic">🙏 Thank you for stepping into this sacred calling. We’ll be in touch soon to walk with you.</blockquote>
+    </div>
   </div>
 </section>
 
-<!-- CSS Styling -->
-<style>
-  .statement-container {
-    background: #f0f8ff;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-  }
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("disciplerSignUp");
 
-  .statement-card {
-    max-width: 850px;
-    background: #fff;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    font-family: "Comic Sans MS", "Poppins", sans-serif;
-  }
+  form.addEventListener("submit", e => {
+    e.preventDefault();
 
-  .statement-card h2 {
-    font-size: 32px;
-    text-align: center;
-    color: #4b0082;
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
+    // build JSON payload
+    const data = {
+      fullName: form.querySelector("[name='Full Name']").value,
+      email: form.querySelector("[name='Email Address']").value,
+      phone: form.querySelector("[name='Phone Number']").value,
+      contactMethod: [...form.querySelectorAll("[name='Preferred Contact']:checked")].map(cb => cb.value).join(", "),
+      affiliation: form.querySelector("[name='Affiliation']").value,
+      ageGroup: [...form.querySelectorAll("[name='Age Group']:checked")].map(cb => cb.value).join(", "),
+      ministryArea: [...form.querySelectorAll("[name='Ministry Area']:checked")].map(cb => cb.value).join(", "),
+      availability: [...form.querySelectorAll("[name='Availability']:checked")].map(cb => cb.value).join(", "),
+      safeguarding: form.querySelector("[name='Safeguarding']").checked ? "Yes" : "No",
+      signature: form.querySelector("[name='Signature']").value,
+      date: form.querySelector("[name='Date']").value,
+      tellUsMore: form.querySelector("[name='Why Called']").value,
+      stayConnected: form.querySelector("[name='Stay Connected']").checked ? "Yes" : "No"
+    };
 
-  .statement-card h3 {
-    margin-top: 20px;
-    color: #2c5282;
-    font-size: 22px;
-    font-weight: bold;
-  }
+    fetch("https://script.google.com/macros/s/AKfycbwOW1PQIeM1cR7A5WbCRJsOrvWJGYLE7YkoIRRTF4xk_Bbaxa0ZUcMc5E0LgllNhlAR3g/exec", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" }
+    })
+      .then(res => res.json())
+      .then(response => {
+        alert("🌿 Thank you! Your sign-up has been received.");
+        form.reset();
+      })
+      .catch(err => alert("❌ Error: " + err.message));
+  });
+});
 
-  .statement-card p,
-  .statement-card li {
-    color: #333;
-    line-height: 1.8;
-    font-size: 18px;
-  }
+</script>
+<style> 
+.form-card {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 700px;
+  margin: auto;
+}
 
-  .statement-card ul {
-    margin: 10px 0 20px 20px;
-    list-style: none;
-    padding-left: 0;
-  }
+.form-card h5 {
+  margin-top: 1.5rem;
+  color: #2b6a4e;
+  font-weight: 600;
+}
 
-  .statement-card li {
-    margin-bottom: 12px;
-  }
+.form-card label {
+  font-weight: 500;
+  color: #333;
+}
 
-  .highlight {
-    color: #e91e63;
-    font-weight: bold;
-  }
+.form-card input[type="checkbox"] {
+  margin-right: 6px;
+}
 
-  .closing {
-    font-style: italic;
-    text-align: center;
-    color: #444;
-    margin-top: 20px;
-    font-weight: bold;
-  }
+.form-card button {
+  background: linear-gradient(90deg, #2b6a4e, #3ba776);
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.form-card button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #3ba776, #2b6a4e);
+}
+
 </style>
 
 
-
-     </main>
+  </main>
 
 <!-- Goodbye Section -->
 <div class="goodbye-section text-center">
