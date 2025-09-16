@@ -312,7 +312,7 @@ footer small, footer div {
   position: sticky;
   top: 0;
   z-index: 1030;
-  background: linear-gradient(90deg, #2bb1ff, #4c1f50); /* 🔑 Warm peach gradient */
+  background: linear-gradient(90deg, #660c8a, #660c8a); /* 🔑 Warm peach gradient */
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
@@ -388,7 +388,7 @@ footer small, footer div {
   <div class="brand-mark">
     <img src="logo.jpg" alt="Cross & Crown Logo" class="brand-logo-img">
   </div>
-    <div class="brand-title"><div style="font-size:1.8rem; color:#e6a008; opacity:0.9">Cross & Crown</div>
+    <div class="brand-title"><div style="font-size:1.8rem; color:#fff; opacity:0.9">Cross & Crown</div>
       </div>
     </div>
   </div>
@@ -475,6 +475,172 @@ footer small, footer div {
   </div>
 </nav>
 </header>
+
+ <!-- Contact Quick Links -->
+<div class="contact-icons">
+  <div class="contact-item">
+    <a href="tel:+254720453556" class="contact-btn call">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+    <div class="contact-label">Call Us</div>
+  </div>
+
+  <div class="contact-item">
+    <a href="mailto:info@crossandcrown.org" class="contact-btn email">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <div class="contact-label">Email Us</div>
+  </div>
+
+  <div class="contact-item">
+    <!-- Trigger modal instead of link -->
+    <button class="contact-btn location" onclick="openMap()">
+      <i class="fa-solid fa-location-dot"></i>
+    </button>
+    <div class="contact-label">Find Us</div>
+  </div>
+</div>
+
+<!-- Modal for Google Map -->
+<div id="mapModal" class="map-modal">
+  <div class="map-content">
+    <span class="map-close" onclick="closeMap()">&times;</span>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.196662103849!2d35.14020097396392!3d1.0114456625722217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1781a7d22469a059%3A0x581457864034bfb!2sSt%20Mark&#39;s%20Boys%20High%20School%20Cherengani%20Kitale!5e0!3m2!1sen!2ske!4v1757995375545!5m2!1sen!2ske" 
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+</div>
+<style> 
+  /* Modal background */
+.map-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* Modal content */
+.map-content {
+  background: #fff;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 700px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* Close button */
+.map-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.map-close:hover {
+  color: red;
+}
+
+</style>
+<script>
+function openMap() {
+  document.getElementById("mapModal").style.display = "block";
+}
+function closeMap() {
+  document.getElementById("mapModal").style.display = "none";
+}
+</script>
+
+<style> 
+  /* Contact quick links container */
+.contact-icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+/* Each item */
+.contact-item {
+  flex: 1 1 auto;
+  text-align: center;
+  min-width: 80px;
+}
+
+/* Buttons (circle) */
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #fff;
+  transition: all 0.3s ease;
+  margin: auto;
+}
+
+/* Different colors per icon */
+.contact-btn.call {
+  background: #28a745; /* green */
+}
+.contact-btn.email {
+  background: linear-gradient(135deg, #e53935, #1ce42c); /* red + white */
+  color: #b71c1c;
+}
+.contact-btn.location {
+  background: #d32f2f; /* pure red */
+}
+
+/* Labels */
+.contact-label {
+  margin-top: 6px;
+  font-weight: 600;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  color: #161515;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Hover */
+.contact-btn:hover {
+  transform: scale(1.08);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .contact-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .contact-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+}
+
+</style>
 <style> 
   /* Tagline Styling */
 .tagline {
@@ -485,9 +651,9 @@ footer small, footer div {
 
 .tagline h2 {
   font-family: 'Fredoka One', 'Comic Neue', sans-serif; /* kid-friendly bold font */
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 900;
-  color: #e85d04; /* warm orange */
+  color: #fff; /* warm orange */
   text-decoration: none;
   margin: 0;
 }
@@ -521,7 +687,6 @@ footer small, footer div {
         <div class="slide" style="background: linear-gradient(120deg,#fff1da,#ffd2a6);">
         </div>
       </div>
-
       <div class="hero-overlay">
   <h1 class="welcome-title">🌟 Welcome to Cross & Crown Ministries</h1>
   
@@ -535,8 +700,7 @@ footer small, footer div {
 
     <p>We value your feedback, input, and suggestions. Feel free to write to us—we’ll be glad to reach out and walk with you.  
     You can use the contact form on this site, or write to us directly at  
-    <a href="mailto:info@crossandcrown.org">info@crossandcrown.org</a> or <a href="mailto:info@crossandcrown.com">info@crossandcrown.com</a>.</p>
-
+    <a href="mailto:info@crossandcrown.org">info@crossandcrown.org</a></p>
     <p><strong>God bless you.</strong></p>
   </div>
 
@@ -674,132 +838,256 @@ footer small, footer div {
 }
 </style>
 
-    <!-- ABOUT placeholder -->
-    <section id="about" class="container core-section">
-      <div class="core-title">
-        <h2>✨ Core Values of Cross &amp; Crown Ministries</h2>
-        <p class="text-muted" style="max-width:760px;margin:8px auto 0;">
-          <b>A ministry rooted in Christ, creativity, and compassion.</b>
-        </p>
+   <section id="about" class="container core-section">
+  <div class="core-title">
+    <h2>✨ Core Values of Cross & Crown Ministries</h2>
+    <p class="text-muted" style="max-width:760px;margin:8px auto 0;">
+      <b>A ministry rooted in Christ, creativity, and compassion.</b>
+    </p>
+  </div>
+
+  <div class="row values-grid g-4 mt-3">
+    <!-- Core Value 1 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card p-3 h-100">
+        <div class="d-flex align-items-center gap-3">
+          <div class="value-icon">
+            <i class="fa-solid fa-cross" style="color:var(--accent-green); font-size:20px;"></i>
+          </div>
+          <div>
+            <h5 style="margin-bottom:6px;color:var(--accent-green)">Christ-Centered Living</h5>
+            <p class="small text-muted"><b>We walk daily with Jesus, anchoring every action in faith, truth, and love.</b></p>
+          </div>
+        </div>
+
+        <div class="more-content" style="display:none; margin-top:10px;">
+          <p><b>🌟 Core Value 1: Christ-Centred Living</b></p>
+          <p><b>💬 “Jesus First, Always!”</b></p>
+          <p>Jesus is our number one! We follow Him in everything — at home, at school, in church, and with friends. We want our words, actions, and choices to show that Jesus lives in us.</p>
+          <p><b>📖 Colossians 3:17</b> — "And whatever you do, whether in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through him."</p>
+          <p><b>🎯 Challenge:</b> This week, before making any decision, stop and ask: “What would Jesus want me to do?” Then do it with a thankful heart.</p>
+        </div>
+        <button class="btn btn-sm btn-outline-primary mt-2 read-more">Read More</button>
       </div>
+    </div>
 
-      <!-- Core Values grid (8 boxes) -->
-      <div class="row values-grid g-4 mt-3">
-        <!-- card example repeated for 8 values -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card p-3 h-100">
-            <div class="d-flex align-items-center gap-3">
-              <div class="value-icon">
-                <i class="fa-solid fa-cross" style="color:var(--accent-green); font-size:20px;"></i>
-              </div>
-              <div>
-                <h5 style="margin-bottom:6px;color:var(--accent-green)">Christ-Centered Living</h5>
-                <p class="small text-muted"><b>We walk daily with Jesus, anchoring every action in faith, truth, and love.</b></p>
-              </div>
-            </div>
+    <!-- Core Value 2 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card p-3 h-100">
+        <div class="d-flex align-items-center gap-3">
+          <div class="value-icon">
+            <i class="fa-solid fa-hands-helping" style="color:#f5a623; font-size:20px;"></i>
+          </div>
+          <div>
+            <h5 style="margin-bottom:6px;color:#f5a623">Empowering Relationships</h5>
+            <p class="small text-muted"><b>We build trusted mentorships that equip young hearts with wisdom, dignity, and practical tools.</b></p>
           </div>
         </div>
 
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card p-3 h-100">
-            <div class="d-flex align-items-center gap-3">
-              <div class="value-icon">
-                <i class="fa-solid fa-hands-helping" style="color:#f5a623; font-size:20px;"></i>
-              </div>
-              <div>
-                <h5 style="margin-bottom:6px;color:#f5a623">Empowering Relationships</h5>
-                <p class="small text-muted"><b>We build trusted mentorships that equip young hearts with wisdom, dignity, and practical tools.</b></p>
-              </div>
-            </div>
-          </div>
+        <div class="more-content" style="display:none; margin-top:10px;">
+          <p><b>🌟 Core Value 2: Empowering Relationships</b></p>
+          <p><b>💬 “We Build Each Other Up!”</b></p>
+          <p>We choose to be kind, encouraging, and helpful to each other. We build friendships that make us stronger in faith and life, and we cheer each other on to become who God made us to be.</p>
+          <p><b>📖 1 Thessalonians 5:11</b> — "Therefore encourage one another and build each other up, just as in fact you are doing."</p>
+          <p><b>🎯 Challenge:</b> This week, say one kind or encouraging thing to a friend or family member every day — and watch how it brightens their day!</p>
         </div>
-
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card p-3 h-100">
-            <div class="d-flex align-items-center gap-3">
-              <div class="value-icon">
-                <i class="fa-solid fa-book-open" style="color:var(--accent-teal); font-size:20px;"></i>
-              </div>
-              <div>
-                <h5 style="margin-bottom:6px;color:var(--accent-teal)">Transformative Storytelling</h5>
-                <p class="small text-muted"><b>We share God’s Word through creative narratives that shape identity, purpose, and hope.</b></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card p-3 h-100">
-            <div class="d-flex align-items-center gap-3">
-              <div class="value-icon">
-                <i class="fa-solid fa-paint-brush" style="color:var(--accent-ocre); font-size:20px;"></i>
-              </div>
-              <div>
-                <h5 style="margin-bottom:6px;color:var(--accent-ocre)">Creative Expression</h5>
-                <p class="small text-muted"><b>We celebrate music, movement, and art as reflections of divine beauty and joy.</b></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- second row -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card p-3 h-100">
-            <div class="d-flex align-items-center gap-3">
-              <div class="value-icon">
-                <i class="fa-solid fa-hands-heart" style="color:var(--accent-olive); font-size:20px;"></i>
-              </div>
-              <div>
-                <h5 style="margin-bottom:6px;color:var(--accent-olive)">Compassionate Service</h5>
-                <p class="small text-muted"><b>We live out Christ’s love through empathy, justice, and community care.</b></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card p-3 h-100">
-            <div class="d-flex align-items-center gap-3">
-              <div class="value-icon">
-                <i class="fa-solid fa-people-roof" style="color:#9b6cc8; font-size:20px;"></i>
-              </div>
-              <div>
-                <h5 style="margin-bottom:6px;color:#9b6cc8">Unity in Diversity</h5>
-                <p class="small text-muted"><b>We honor every child’s voice, background, and calling.</b></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card p-3 h-100">
-            <div class="d-flex align-items-center gap-3">
-              <div class="value-icon">
-                <i class="fa-solid fa-award" style="color:#d46b6b; font-size:20px;"></i>
-              </div>
-              <div>
-                <h5 style="margin-bottom:6px;color:#d46b6b">Excellence with Grace</h5>
-                <p class="small text-muted"><b>We pursue high standards guided by grace, humility, and spiritual clarity.</b></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card p-3 h-100">
-            <div class="d-flex align-items-center gap-3">
-              <div class="value-icon">
-                <i class="fa-solid fa-child-reaching" style="color:#3b83c1; font-size:20px;"></i>
-              </div>
-              <div>
-                <h5 style="margin-bottom:6px;color:#3b83c1">Spiritual Capacity of Children</h5>
-                <p class="small text-muted"><b>We believe children can know God, hear His voice, and live out their faith with boldness and joy.</b></p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <button class="btn btn-sm btn-outline-primary mt-2 read-more">Read More</button>
       </div>
-    </section>
+    </div>
+
+    <!-- Core Value 3 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card p-3 h-100">
+        <div class="d-flex align-items-center gap-3">
+          <div class="value-icon">
+            <i class="fa-solid fa-book-open" style="color:var(--accent-teal); font-size:20px;"></i>
+          </div>
+          <div>
+            <h5 style="margin-bottom:6px;color:var(--accent-teal)">Transformative Storytelling</h5>
+            <p class="small text-muted"><b>We share God’s Word through creative narratives that shape identity, purpose, and hope.</b></p>
+          </div>
+        </div>
+
+        <div class="more-content" style="display:none; margin-top:10px;">
+          <p><b>🌟 Core Value 3: Transformative Storytelling</b></p>
+          <p><b>💬 “Stories That Change Lives!”</b></p>
+          <p>We use stories from the Bible and real life to inspire, teach, and transform hearts. Every story is a chance to learn about God’s love, make wise choices, and become the person God wants us to be.</p>
+          <p><b>📖 Deuteronomy 6:6-7</b> — "These commandments that I give you today are to be on your hearts. Impress them on your children..."</p>
+          <p><b>🎯 Challenge:</b> This week, share a Bible story or a lesson you’ve learned with a friend or family member — and talk about how it can change your actions or choices.</p>
+        </div>
+        <button class="btn btn-sm btn-outline-primary mt-2 read-more">Read More</button>
+      </div>
+    </div>
+
+    <!-- Core Value 4 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card p-3 h-100">
+        <div class="d-flex align-items-center gap-3">
+          <div class="value-icon">
+            <i class="fa-solid fa-paint-brush" style="color:var(--accent-ocre); font-size:20px;"></i>
+          </div>
+          <div>
+            <h5 style="margin-bottom:6px;color:var(--accent-ocre)">Creative Expression</h5>
+            <p class="small text-muted"><b>We celebrate music, movement, and art as reflections of divine beauty and joy.</b></p>
+          </div>
+        </div>
+
+        <div class="more-content" style="display:none; margin-top:10px;">
+          <p><b>🌟 Core Value 4: Creative Expression</b></p>
+          <p><b>💬 “Serving Others, Serving Jesus!”</b></p>
+          <p>We show God’s love by helping and caring for others, especially those in need. Every small act of kindness makes a big difference and reflects Jesus’ heart to the world.</p>
+          <p><b>📖 1 Peter 4:10</b> — "Each of you should use whatever gift you have received to serve others, faithfully administering God’s grace in its various forms."</p>
+          <p><b>🎯 Challenge:</b> This week, do one kind act for someone without expecting anything in return — help a friend, family member, or neighbour in need.</p>
+        </div>
+        <button class="btn btn-sm btn-outline-primary mt-2 read-more">Read More</button>
+      </div>
+    </div>
+
+    <!-- Core Value 5 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card p-3 h-100">
+        <div class="d-flex align-items-center gap-3">
+          <div class="value-icon">
+            <i class="fa-solid fa-hands-heart" style="color:var(--accent-olive); font-size:20px;"></i>
+          </div>
+          <div>
+            <h5 style="margin-bottom:6px;color:var(--accent-olive)">Compassionate Service</h5>
+            <p class="small text-muted"><b>We live out Christ’s love through empathy, justice, and community care.</b></p>
+          </div>
+        </div>
+
+        <div class="more-content" style="display:none; margin-top:10px;">
+          <p><b>🌟 Core Value 5: Compassionate Service</b></p>
+          <p><b>💬 “Serving Others, Serving Jesus!”</b></p>
+          <p>We show God’s love by helping and caring for others, especially those in need. Every small act of kindness makes a big difference and reflects Jesus’ heart to the world.</p>
+          <p><b>📖 1 Peter 4:10</b> — "Each of you should use whatever gift you have received to serve others, faithfully administering God’s grace in its various forms."</p>
+          <p><b>🎯 Challenge:</b> This week, do one kind act for someone without expecting anything in return — help a friend, family member, or neighbour in need.</p>
+        </div>
+        <button class="btn btn-sm btn-outline-primary mt-2 read-more">Read More</button>
+      </div>
+    </div>
+
+    <!-- Core Value 6 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card p-3 h-100">
+        <div class="d-flex align-items-center gap-3">
+          <div class="value-icon">
+            <i class="fa-solid fa-people-roof" style="color:#9b6cc8; font-size:20px;"></i>
+          </div>
+          <div>
+            <h5 style="margin-bottom:6px;color:#9b6cc8">Unity in Diversity</h5>
+            <p class="small text-muted"><b>We honor every child’s voice, background, and calling.</b></p>
+          </div>
+        </div>
+
+        <div class="more-content" style="display:none; margin-top:10px;">
+          <p><b>🌟 Core Value 6: Unity in Diversity</b></p>
+          <p><b>💬 “One Body, Many Parts.”</b></p>
+          <p>We celebrate that God made each of us unique — with different backgrounds, talents, and ideas. By respecting and learning from one another, we grow stronger together and reflect God’s love in our diversity.</p>
+          <p><b>📖 1 Corinthians 12:12</b> — "There is one body, but it has many parts. But all its many parts make up one body. It is the same with Christ."</p>
+          <p><b>🎯 Challenge:</b> This week, get to know someone different from you — learn about their interests, culture, or talents, and celebrate what makes them special.</p>
+        </div>
+        <button class="btn btn-sm btn-outline-primary mt-2 read-more">Read More</button>
+      </div>
+    </div>
+
+    <!-- Core Value 7 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card p-3 h-100">
+        <div class="d-flex align-items-center gap-3">
+          <div class="value-icon">
+            <i class="fa-solid fa-award" style="color:#d46b6b; font-size:20px;"></i>
+          </div>
+          <div>
+            <h5 style="margin-bottom:6px;color:#d46b6b">Excellence with Grace</h5>
+            <p class="small text-muted"><b>We pursue high standards guided by grace, humility, and spiritual clarity.</b></p>
+          </div>
+        </div>
+
+        <div class="more-content" style="display:none; margin-top:10px;">
+          <p><b>🌟 Core Value 7: Excellence with Grace</b></p>
+          <p><b>💬 “Excellence That Reflects Jesus.”</b></p>
+          <p>We strive to do our best in everything — learning, serving, and creating — while treating others with kindness, patience, and humility. Our goal is to honour God through both our effort and our attitude.</p>
+          <p><b>📖 Colossians 3:23</b> — "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters."</p>
+          <p><b>🎯 Challenge:</b> This week, give your best effort in one task — schoolwork, ministry, or a creative project — and do it with a kind and humble heart toward others.</p>
+        </div>
+        <button class="btn btn-sm btn-outline-primary mt-2 read-more">Read More</button>
+      </div>
+    </div>
+
+    <!-- Core Value 8 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card p-3 h-100">
+        <div class="d-flex align-items-center gap-3">
+          <div class="value-icon">
+            <i class="fa-solid fa-child-reaching" style="color:#3b83c1; font-size:20px;"></i>
+          </div>
+          <div>
+            <h5 style="margin-bottom:6px;color:#3b83c1">Spiritual Capacity of Children</h5>
+            <p class="small text-muted"><b>We believe children can know God, hear His voice, and live out their faith with boldness and joy.</b></p>
+          </div>
+        </div>
+
+        <div class="more-content" style="display:none; margin-top:10px;">
+          <p><b>🌟 Core Value 8: Spiritual Capacity of Children</b></p>
+          <p><b>💬 “Little Hearts, Big Faith.”</b></p>
+          <p>We believe every child has the ability to know, love, and follow God. By nurturing their faith, teaching them God’s Word, and encouraging them to use their gifts, we help children grow into strong, Spirit-filled followers of Jesus.</p>
+          <p><b>📖 Mark 10:14</b> — "Let the little children come to me, and do not hinder them, for the kingdom of God belongs to such as these."</p>
+          <p><b>🎯 Challenge:</b> This week, spend time learning a new Bible verse, pray daily, or share what you learned about God with a friend or family member.</p>
+        </div>
+        <button class="btn btn-sm btn-outline-primary mt-2 read-more">Read More</button>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.read-more {
+  background-color: #007bff;   /* Bootstrap blue */
+  color: #fff;
+  font-size: 0.75rem;          /* small text */
+  padding: 4px 12px;           /* small size */
+  border: none;
+  border-radius: 15px;         /* pill style */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.read-more:hover {
+  background-color: #0056b3;   /* darker blue on hover */
+  transform: scale(1.05);      /* subtle hover effect */
+}
+
+.read-more:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.6);
+}
+
+.read-more:hover {
+  background: #f5a623;
+  border-color: #f5a623;
+  color: white;
+}
+
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const buttons = document.querySelectorAll(".read-more");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", function() {
+      const moreContent = this.previousElementSibling;
+      if (moreContent.style.display === "none" || moreContent.style.display === "") {
+        moreContent.style.display = "block";
+        this.textContent = "Read Less";
+      } else {
+        moreContent.style.display = "none";
+        this.textContent = "Read More";
+      }
+    });
+  });
+});
+</script>
+
 
     <!-- Ministries / Pillars -->
     <section id="ministries" class="container pillars">
@@ -856,6 +1144,149 @@ footer small, footer div {
         </div>
       </div>
     </section>
+    <!-- Mentor Flyer Section -->
+<section class="mentor-flyer container my-5 p-4 rounded shadow">
+  <div class="flyer-text text-center mb-4">
+    <h3 class="fw-bold">Become a Mentor. <br> Become a Discipler.</h3>
+    <p class="lead">
+      You don't need to be perfect—just present. <br>
+      At <b>Cross & Crown</b>, we believe every girl deserves someone who sees her, 
+      affirms her, and walks beside her in faith.
+    </p>
+    <p>
+      Become a mentor. Become a discipler. <br>
+      Become the reason she knows she's not alone.
+    </p>
+    <blockquote class="bible-verse">
+      “And let us consider how we may spur one another on toward love and good deeds.” <br>
+      <span class="fw-bold">Hebrews 10:24</span>
+    </blockquote>
+  </div>
+
+<!-- Pillars navbar-style row -->
+<div class="pillars-navbar d-flex justify-content-around align-items-center my-4">
+  <div class="pillar-item text-center">
+    <img src="https://cdn-icons-png.flaticon.com/512/8674/8674423.png" alt="Discipleship">
+    <div class="pillar-label">DISCIPLESHIP</div>
+  </div>
+
+  <div class="pillar-item text-center">
+    <img src="https://cdn-icons-png.flaticon.com/512/10829/10829293.png" alt="Mentorship & Coaching">
+    <div class="pillar-label">MENTORSHIP & COACHING</div>
+  </div>
+
+  <div class="pillar-item text-center">
+    <img src="https://cdn-icons-png.flaticon.com/512/4144/4144747.png" alt="Compassion">
+    <div class="pillar-label">COMPASSION</div>
+  </div>
+</div>
+
+  <!-- Button -->
+  <div class="text-center">
+    <a href="mentor-form.html" class="btn-walk">Ready to Walk With Her</a>
+  </div>
+</section>
+<style> 
+/* Pillars navbar */
+.pillars-navbar {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* stack nicely on small screens */
+  gap: 1rem;
+}
+
+.pillar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+  flex: 1;
+}
+
+.pillar-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.pillar-item img:hover {
+  transform: scale(1.1);
+}
+
+.pillar-label {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+
+  .mentor-flyer {
+  background: #fff7f0;
+  border-left: 6px solid #f5a623;
+  border-radius: 12px;
+}
+
+.flyer-text h3 {
+  font-family: 'Comic Neue', cursive;
+  color: #4c1f50;
+  font-weight: 700;
+}
+
+.flyer-text p {
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.flyer-text .bible-verse {
+  font-style: italic;
+  color: #555;
+  margin-top: 1rem;
+}
+
+.pillars-row .pillar-box {
+  background: #2bb1ff;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.pillars-row .pillar-box:nth-child(2) {
+  background: #f5a623; /* orange */
+}
+.pillars-row .pillar-box:nth-child(3) {
+  background: #d46b6b; /* warm red */
+}
+
+.btn-walk {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: #fff;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 12px rgba(238, 9, 121, 0.3);
+}
+
+.btn-walk:hover {
+  background: linear-gradient(90deg, #ee0979, #ff6a00);
+  transform: scale(1.05);
+}
+
+</style>
   </main>
 
 <!-- Goodbye Section -->
@@ -922,8 +1353,7 @@ footer small, footer div {
       <div class="col-md-4 mb-4">
         <h5>Quick Links</h5>
         <a href="statement.html">Our Statement of Faith</a>
-        <a href="mentor-form.html">Become a Mentor</a>
-         <a href="mentor-form.html">Ready to walk with her</a>
+        <a href="mentor.html">Become a Mentor</a>
         <a href="resources.html">Resources</a>
         <a href="privacy.html">Privacy & Data Protection Policy</a>
       </div>
