@@ -1135,61 +1135,210 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 
-    <!-- Ministries / Pillars -->
-    <section id="ministries" class="container pillars">
-      <h2 class="mb-3">THE FIVE PILLARS OF CROSS &amp; CROWN MINISTRIES</h2>
-      <div class="row g-4 align-items-start justify-content-center">
-        <!-- Pillar 1 -->
-        <div class="col-6 col-md-4 col-lg-2 pillar-card pill-1">
-          <div class="pillar-base">
-            <div class="pillar-icon"><i class="fa-solid fa-seedling"></i></div>
-          </div>
-          <div class="pillar-pedestal"></div>
-          <div class="pill-title" style="color:var(--accent-green)">DISCIPLESHIP</div>
-          <p class="small text-muted"><b>Walking daily with Jesus — growing in faith, love, and truth.</b></p>
-        </div>
+   <!-- Ministries / Pillars -->
+<section id="ministries" class="container pillars">
+  <h2 class="mb-3">THE FIVE PILLARS OF CROSS &amp; CROWN MINISTRIES</h2>
+  <div class="row g-4 align-items-start justify-content-center">
 
-        <!-- Pillar 2 -->
-        <div class="col-6 col-md-4 col-lg-2 pillar-card pill-2">
-          <div class="pillar-base">
-            <div class="pillar-icon"><i class="fa-solid fa-user-group"></i></div>
-          </div>
-          <div class="pillar-pedestal"></div>
-          <div class="pill-title" style="color:#f5a623">MENTORSHIP &amp; COACHING</div>
-          <p class="small text-muted"><b>Building trusted relationships and equipping young hearts with practical tools.</b></p>
-        </div>
-
-        <!-- Pillar 3 -->
-        <div class="col-6 col-md-4 col-lg-2 pillar-card pill-3">
-          <div class="pillar-base">
-            <div class="pillar-icon"><i class="fa-solid fa-book-open"></i></div>
-          </div>
-          <div class="pillar-pedestal"></div>
-          <div class="pill-title" style="color:var(--accent-teal)">BIBLE STORYTELLING</div>
-          <p class="small text-muted"><b>Sharing God’s Word through engaging, transformative narratives.</b></p>
-        </div>
-
-        <!-- Pillar 4 -->
-        <div class="col-6 col-md-4 col-lg-2 pillar-card pill-4">
-          <div class="pillar-base">
-            <div class="pillar-icon"><i class="fa-solid fa-palette"></i></div>
-          </div>
-          <div class="pillar-pedestal"></div>
-          <div class="pill-title" style="color:var(--accent-ocre)">ARTS</div>
-          <p class="small text-muted"><b>Celebrating creativity through music, movement and visual expression.</b></p>
-        </div>
-
-        <!-- Pillar 5 -->
-        <div class="col-6 col-md-4 col-lg-2 pillar-card pill-5">
-          <div class="pillar-base">
-            <div class="pillar-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
-          </div>
-          <div class="pillar-pedestal"></div>
-          <div class="pill-title" style="color:var(--accent-olive)">COMPASSION</div>
-          <p class="small text-muted"><b>Living out Christ’s love through service, empathy and community care.</b></p>
-        </div>
+    <!-- Pillar 1 -->
+    <div class="col-6 col-md-4 col-lg-2 pillar-card pill-1">
+      <div class="pillar-base">
+        <div class="pillar-icon"><i class="fa-solid fa-seedling"></i></div>
       </div>
-    </section>
+      <div class="pillar-pedestal"></div>
+      <div class="pill-title" style="color:var(--accent-green)">DISCIPLESHIP</div>
+      <p class="small text-muted"><b>Walking daily with Jesus — growing in faith, love, and truth.</b></p>
+      <button class="read-more-btn" onclick="openPillarModal(1)">Read More</button>
+    </div>
+
+    <!-- Pillar 2 -->
+    <div class="col-6 col-md-4 col-lg-2 pillar-card pill-2">
+      <div class="pillar-base">
+        <div class="pillar-icon"><i class="fa-solid fa-palette"></i></div>
+      </div>
+      <div class="pillar-pedestal"></div>
+      <div class="pill-title" style="color:var(--accent-ocre)">ARTS</div>
+      <p class="small text-muted"><b>Celebrating creativity through music, movement and visual expression.</b></p>
+      <button class="read-more-btn" onclick="openPillarModal(2)">Read More</button>
+    </div>
+
+    <!-- Pillar 3 -->
+    <div class="col-6 col-md-4 col-lg-2 pillar-card pill-3">
+      <div class="pillar-base">
+        <div class="pillar-icon"><i class="fa-solid fa-book-open"></i></div>
+      </div>
+      <div class="pillar-pedestal"></div>
+      <div class="pill-title" style="color:var(--accent-teal)">BIBLE STORYTELLING</div>
+      <p class="small text-muted"><b>Sharing God’s Word through engaging, transformative narratives.</b></p>
+      <button class="read-more-btn" onclick="openPillarModal(3)">Read More</button>
+    </div>
+
+    <!-- Pillar 4 -->
+    <div class="col-6 col-md-4 col-lg-2 pillar-card pill-4">
+      <div class="pillar-base">
+        <div class="pillar-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+      </div>
+      <div class="pillar-pedestal"></div>
+      <div class="pill-title" style="color:var(--accent-olive)">COMPASSION</div>
+      <p class="small text-muted"><b>Living out Christ’s love through service, empathy and community care.</b></p>
+      <button class="read-more-btn" onclick="openPillarModal(4)">Read More</button>
+    </div>
+
+    <!-- Pillar 5 -->
+    <div class="col-6 col-md-4 col-lg-2 pillar-card pill-5">
+      <div class="pillar-base">
+        <div class="pillar-icon"><i class="fa-solid fa-user-group"></i></div>
+      </div>
+      <div class="pillar-pedestal"></div>
+      <div class="pill-title" style="color:#f5a623">MENTORSHIP &amp; COACHING</div>
+      <p class="small text-muted"><b>Building trusted relationships and equipping young hearts with practical tools.</b></p>
+      <button class="read-more-btn" onclick="openPillarModal(5)">Read More</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODAL ================= -->
+<div id="pillarModal" class="pillar-modal">
+  <div class="pillar-modal-content">
+    <span class="pillar-close" onclick="closePillarModal()">&times;</span>
+    <div id="pillarText"></div>
+  </div>
+</div>
+
+<!-- ================= STYLES ================= -->
+<style>
+.read-more-btn {
+  margin-top: 10px;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.read-more-btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+.pillar-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.6);
+}
+.pillar-modal-content {
+  background: #fff;
+  margin: 4% auto;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+.pillar-close {
+  position: absolute;
+  top: 15px; right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.pillar-close:hover { color: red; }
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const pillarTexts = {
+  1: `🌱 <h3>Pillar 1: Discipleship</h3>
+  <p><b>📖 Key Verse</b><br>
+  Matthew 28:19-20 – “Therefore go and make disciples of all nations...”</p>
+  <p><b>🏷 Motto:</b> Walking with Christ, Growing in Faith.</p>
+  <p><b>💡 Ministry Components</b></p>
+  <ul>
+    <li><b>The Walk With Her Initiative</b> – mentoring and supporting girls to make wise choices, finish school, and discover their God-given potential.</li>
+    <li><b>SDG Disciples: "Small Disciples Growing"</b> – teaching children and youth to love God, love people, and care for creation through the lens of the 17 UN Sustainable Development Goals (SDGs).
+      <ul>
+        <li>Weekly Bible Lessons aligned with SDGs (e.g., Joseph’s story & Goal 2: Zero Hunger).</li>
+        <li>Practical Projects like tree planting, hygiene campaigns, and community service.</li>
+      </ul>
+    </li>
+    <li><b>Discipleship Classes & Bible Clubs</b> – weekly sessions and clubs in schools and communities.</li>
+    <li><b>One-on-One Mentorship & Counseling</b> – spiritual guidance, prayer, and pastoral care.</li>
+    <li><b>A–Z Discipleship Values</b> – teaching biblical values from A to Z for holistic spiritual growth.</li>
+    <li><b>Sports Discipleship (Soccer Focus)</b> – with KICK Academy UK for Christ-centered training.</li>
+    <li><b>Commitment & Safeguarding</b> – all disciplers sign safeguarding forms.</li>
+    <li><b>End-of-Year Recognition</b> – certificates for faithful service.</li>
+  </ul>`,
+
+  2: `🎭 <h3>Pillar 2: Arts, Creativity & Sports</h3>
+  <p><b>📖 Key Verse</b><br>
+  Colossians 3:17 – “And whatever you do, whether in word or deed...”</p>
+  <p><b>🏷 Motto:</b> Using Our Gifts to Glorify God.</p>
+  <p><b>💡 Ministry Components</b></p>
+  <ul>
+    <li><b>Cycle of Hope 🚴</b> – cycling ministry encouraging fitness and outreach.</li>
+    <li><b>Alabaster Voices 🎶</b> – all-girls worship band restoring dignity and purpose.</li>
+    <li><b>KICK Academy Partnership ⚽💃</b> – discipleship through dance and sports.</li>
+    <li><b>Creative Arts & Media 🎨📸</b> – painting, crafts, photography, and storytelling.</li>
+    <li><b>Drama & Storytelling 🎭</b> – Bible-based plays and skits for outreach.</li>
+    <li><b>Annual Arts & Sports Festival 🎉</b> – showcasing youth talents for Christ.</li>
+  </ul>`,
+
+  3: `📚 <h3>Pillar 3: Bible Storytelling</h3>
+  <p><b>📖 Key Verse</b><br>
+  Psalm 78:4 – “We will not hide them from their children...”</p>
+  <p><b>🏷 Motto:</b> Telling God’s Story, Inspiring the Next Generation.</p>
+  <p><b>💡 Ministry Components</b></p>
+  <ul>
+    <li><b>BibleInspirations Media Project</b> – children telling short Bible stories on video.</li>
+    <li><b>Bible-to-Poetry Creativity</b> – Scripture turned into poems and spoken word.</li>
+    <li><b>Storytelling Workshops</b> – interactive Bible learning and retelling.</li>
+    <li><b>Heroes of the Bible Program</b> – lessons from Joseph, Esther, David, etc.</li>
+    <li><b>Puppet Parables</b> – fun, interactive parable storytelling with puppets.</li>
+  </ul>`,
+
+  4: `❤ <h3>Pillar 4: Compassion</h3>
+  <p><b>📖 Key Verse</b><br>
+  Colossians 3:12 – “Clothe yourselves with compassion...”</p>
+  <p><b>🏷 Motto:</b> Love in Action.</p>
+  <p><b>💡 Ministry Components</b></p>
+  <ul>
+    <li><b>Alabaster Project for Girls</b> – supporting vulnerable girls through education and empowerment.</li>
+    <li><b>Community Care & Outreach</b> – visiting homes, hospitals, and communities.</li>
+    <li><b>Acts of Kindness Campaigns</b> – mobilizing youth to meet local needs.</li>
+    <li><b>Pastoral Care & Counseling</b> – emotional and spiritual support for families.</li>
+    <li><b>Prayer & Intercession</b> – children and youth praying for the hurting.</li>
+  </ul>`,
+
+  5: `🤝 <h3>Pillar 5: Mentorship & Coaching</h3>
+  <p><b>📖 Key Verse</b><br>
+  2 Timothy 2:2 – “And the things you have heard me say...”</p>
+  <p><b>🏷 Motto:</b> Raising Leaders for Today and Tomorrow.</p>
+  <p><b>💡 Ministry Components</b></p>
+  <ul>
+    <li><b>Cycle of Hope Mentorship 🚴</b> – teaching discipline, perseverance, teamwork.</li>
+    <li><b>KICK Academy Coaching ⚽💃</b> – mentorship through sports and dance.</li>
+    <li><b>Walk With Her Initiative 👧</b> – mentorship sessions for girls.</li>
+    <li><b>Mentorship Groups & Leadership Huddles</b> – biblical leadership training in small groups.</li>
+    <li><b>Mentor Development & Training</b> – equipping mentors with tools to disciple.</li>
+    <li><b>Recognition & Graduation</b> – celebrating mentors and mentees annually.</li>
+  </ul>`
+};
+
+function openPillarModal(num) {
+  document.getElementById("pillarText").innerHTML = pillarTexts[num];
+  document.getElementById("pillarModal").style.display = "block";
+}
+function closePillarModal() {
+  document.getElementById("pillarModal").style.display = "none";
+}
+</script>
+
     <!-- Mentor Flyer Section -->
 <section class="mentor-flyer container my-5 p-4 rounded shadow">
   <div class="flyer-text text-center mb-4">
