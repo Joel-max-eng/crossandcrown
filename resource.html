@@ -724,149 +724,164 @@ function closeMap() {
 }
 
 </style>
-<div class="form-container">
-  <h2 class="text-center">🌿 Cross & Crown Ministries</h2>
-  <p class="text-center fst-italic">✨ Discipler Sign-Up Form <br> “You don’t need to be perfect—just present.”</p>
+<!-- ================== A-Z VALUES SECTION ================== -->
+<section id="az-values" class="container my-5">
+  <h2 class="text-center mb-4">🌿 A–Z Values of Our Discipleship Pillar</h2>
+  <h2 class="text-center mb-4">Click each letter individually to View the Content</h2>
 
-  <form id="disciplerForm">
+  <!-- Letters Grid -->
+  <div class="az-grid">
+    <!-- Example for A -->
+    <div class="az-item" onclick="openFlyer('A')">A</div>
+    <div class="az-item" onclick="openFlyer('B')">B</div>
+    <div class="az-item" onclick="openFlyer('C')">C</div>
+    <div class="az-item" onclick="openFlyer('D')">D</div>
+    <div class="az-item" onclick="openFlyer('E')">E</div>
+    <div class="az-item" onclick="openFlyer('F')">F</div>
+    <div class="az-item" onclick="openFlyer('G')">G</div>
+    <div class="az-item" onclick="openFlyer('H')">H</div>
+    <div class="az-item" onclick="openFlyer('I')">I</div>
+    <div class="az-item" onclick="openFlyer('J')">J</div>
+    <div class="az-item" onclick="openFlyer('K')">K</div>
+    <div class="az-item" onclick="openFlyer('L')">L</div>
+    <div class="az-item" onclick="openFlyer('M')">M</div>
+    <div class="az-item" onclick="openFlyer('N')">N</div>
+    <div class="az-item" onclick="openFlyer('O')">O</div>
+    <div class="az-item" onclick="openFlyer('P')">P</div>
+    <div class="az-item" onclick="openFlyer('Q')">Q</div>
+    <div class="az-item" onclick="openFlyer('R')">R</div>
+    <div class="az-item" onclick="openFlyer('S')">S</div>
+    <div class="az-item" onclick="openFlyer('T')">T</div>
+    <div class="az-item" onclick="openFlyer('U')">U</div>
+    <div class="az-item" onclick="openFlyer('V')">V</div>
+    <div class="az-item" onclick="openFlyer('W')">W</div>
+    <div class="az-item" onclick="openFlyer('X')">X</div>
+    <div class="az-item" onclick="openFlyer('Y')">Y</div>
+    <div class="az-item" onclick="openFlyer('Z')">Z</div>
+  </div>
+</section>
 
-    <!-- Personal Information -->
-    <div class="section-title">👤 Personal Information</div>
-    <div class="mb-3">
-      <label>Full Name</label>
-      <input type="text" class="form-control" name="FullName" required>
-    </div>
-    <div class="mb-3">
-      <label>Email Address</label>
-      <input type="email" class="form-control" name="Email" required>
-    </div>
-    <div class="mb-3">
-      <label>Phone Number</label>
-      <input type="text" class="form-control" name="Phone">
-    </div>
-    <div class="mb-3">
-      <label>Preferred Method of Contact</label><br>
-      <input type="checkbox" name="ContactMethod" value="Email"> Email
-      <input type="checkbox" name="ContactMethod" value="Phone"> Phone
-      <input type="checkbox" name="ContactMethod" value="WhatsApp"> WhatsApp
-    </div>
-    <div class="mb-3">
-      <label>Church or School Affiliation (if any)</label>
-      <input type="text" class="form-control" name="Affiliation">
-    </div>
-
-    <!-- Discipleship Preferences -->
-    <div class="section-title">🌱 Discipleship Preferences</div>
-    <div class="mb-3">
-      <label>Age Group You Feel Called to Disciple</label><br>
-      <input type="checkbox" name="AgeGroup" value="8–11 years"> 8–11 years
-      <input type="checkbox" name="AgeGroup" value="12–15 years"> 12–15 years
-      <input type="checkbox" name="AgeGroup" value="16–18 years"> 16–18 years
-      <input type="checkbox" name="AgeGroup" value="Open"> Open to any age
-    </div>
-    <div class="mb-3">
-      <label>Ministry Area You’re Most Drawn To</label><br>
-      <input type="checkbox" name="MinistryArea" value="Discipleship"> Discipleship
-      <input type="checkbox" name="MinistryArea" value="Mentorship & Coaching"> Mentorship & Coaching
-      <input type="checkbox" name="MinistryArea" value="Arts & Creativity"> Arts & Creativity
-      <input type="checkbox" name="MinistryArea" value="Compassion"> Compassion
-      <input type="checkbox" name="MinistryArea" value="Bible Storytelling"> Bible Storytelling
-    </div>
-    <div class="mb-3">
-      <label>Availability</label><br>
-      <input type="checkbox" name="Availability" value="Weekly"> Weekly
-      <input type="checkbox" name="Availability" value="Biweekly"> Biweekly
-      <input type="checkbox" name="Availability" value="Monthly"> Monthly
-      <input type="checkbox" name="Availability" value="Other"> Other
-    </div>
-
-    <!-- Safeguarding Commitment -->
-    <div class="section-title">🛡 Safeguarding Commitment</div>
-    <p class="fst-italic small">Every child deserves to feel safe, seen, and protected.</p>
-    <div class="mb-3">
-      <input type="checkbox" name="Safeguarding" value="Agreed" required>
-      I have read and agree to the Safeguarding & Protection Commitment document.
-    </div>
-    <div class="row">
-      <div class="col-md-6 mb-3">
-        <label>Signature</label>
-        <input type="text" class="form-control" name="Signature">
-      </div>
-      <div class="col-md-6 mb-3">
-        <label>Date</label>
-        <input type="date" class="form-control" name="Date">
-      </div>
-    </div>
-
-    <!-- Open Text -->
-    <div class="section-title">💬 Tell Us More</div>
-    <textarea class="form-control mb-3" name="WhyDisciple" rows="4" placeholder="Why do you feel called to disciple? What gifts or experiences do you bring?"></textarea>
-
-    <!-- Stay Connected -->
-    <div class="section-title">📬 Stay Connected</div>
-    <div class="mb-3">
-      <input type="checkbox" name="StayConnected" value="Yes"> I’d like to receive updates, training invitations, and encouragement.
-    </div>
-
-    <!-- Submit -->
-    <div class="text-center mt-4">
-      <button type="submit" class="btn btn-submit">Submit Form</button>
-    </div>
-  </form>
+<!-- ================== MODAL ================== -->
+<div id="flyerModal" class="flyer-modal">
+  <span class="flyer-close" onclick="closeFlyer()">&times;</span>
+  <img class="flyer-content" id="flyerImage" alt="A-Z Flyer">
 </div>
 
+<!-- ================== STYLES ================== -->
+<style>
+#az-values {
+  background: #fdf9f3;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.az-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+  gap: 12px;
+  text-align: center;
+}
+
+.az-item {
+  background: #fff;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #4CAF50;
+}
+
+.az-item:hover {
+  background: #4CAF50;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Modal */
+.flyer-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+.flyer-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.flyer-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.flyer-close:hover {
+  color: red;
+}
+</style>
+
+<!-- ================== SCRIPT ================== -->
 <script>
-  document.getElementById("disciplerForm").addEventListener("submit", function(e){
-    e.preventDefault();
+// Define flyer images for each letter
+const flyers = {
+  A: "flyers/A.jpg",
+  B: "flyers/B.jpg",
+  C: "flyers/C.jpg",
+  D: "flyers/D.jpg",
+  E: "flyers/E.jpg",
+  F: "flyers/F.jpg",
+  G: "flyers/G.jpg",
+  H: "flyers/H.jpg",
+  I: "flyers/I.jpg",
+  J: "flyers/J.jpg",
+  K: "flyersK.jpg",
+  L: "flyers/L.jpg",
+  M: "flyers/M.jpg",
+  N: "flyers/N.jpg",
+  O: "flyers/O.jpg",
+  P: "flyers/P.jpg",
+  Q: "flyers/Q.jpg",
+  R: "flyers/R.jpg",
+  S: "flyers/S.jpg",
+  T: "flyers/T.jpg",
+  U: "flyers/U.jpg",
+  V: "flyers/V.jpg",
+  W: "flyers/W.jpg",
+  X: "flyers/X.jpg",
+  Y: "flyers/Y.jpg",
+  Z: "flyers/Z.jpg"
+};
 
-    fetch("https://script.google.com/macros/s/AKfycbyOVO-duDM74je64EQfdxe1jmLVJ5latYbq2qDcViBtOJzyKtyYOqb3lSIGZojD_SHh/exec", {
-      method: "POST",
-      body: new FormData(this)
-    })
-    .then(response => alert("✅ Thank you! Your sign-up has been submitted."))
-    .catch(error => alert("❌ Something went wrong. Please try again."));
-  });
+// Open modal with flyer
+function openFlyer(letter) {
+  const modal = document.getElementById("flyerModal");
+  const img = document.getElementById("flyerImage");
+  img.src = flyers[letter] || "flyers/default.jpg"; // fallback
+  modal.style.display = "block";
+}
+
+// Close modal
+function closeFlyer() {
+  document.getElementById("flyerModal").style.display = "none";
+}
 </script>
- <style>
-    body {
-      background: #f4f9f7;
-      font-family: "Segoe UI", sans-serif;
-    }
-    .form-container {
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 30px;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    h2 {
-      font-weight: bold;
-      color: #2c5f2d;
-    }
-    .section-title {
-      margin-top: 25px;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #1c3d3a;
-    }
-    .btn-submit {
-      background: #2c5f2d;
-      color: #fff;
-      border-radius: 30px;
-      padding: 10px 25px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    .btn-submit:hover {
-      background: #3d7a41;
-    }
-    textarea {
-      resize: none;
-    }
-  </style>
-
-
   </main>
 
 <!-- Goodbye Section -->
@@ -941,7 +956,7 @@ function closeMap() {
 
       <div class="col-md-4 mb-4">
         <h5>Get Involved</h5>
-        <a href="instrument.html">Donate an Instrument</a>
+        <a href="#">Donate an Instrument</a>
         <a href="donate.html">Donate a Bicycle</a>
         <a href="give.html">Donate / Give</a>
       </div>
