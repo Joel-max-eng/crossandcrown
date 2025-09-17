@@ -718,191 +718,147 @@ function closeMap() {
 }
 
 </style>
- <!-- 🌿 Discipler Sign-Up Form -->
-<section id="discipler-form" class="container my-5">
-  <div class="form-card shadow p-4 rounded">
-    <div class="text-center mb-4">
-      <img src="logo.jpg" alt="Cross & Crown Logo" style="width:60px;height:60px;">
-      <h2 class="mt-2">🌿 Cross & Crown Ministries</h2>
-      <h4 class="text-muted">✨ Discipler Sign-Up Form</h4>
-      <p><em>“You don’t need to be perfect—just present.”</em></p>
+<div class="form-container">
+  <h2 class="text-center">🌿 Cross & Crown Ministries</h2>
+  <p class="text-center fst-italic">✨ Discipler Sign-Up Form <br> “You don’t need to be perfect—just present.”</p>
+
+  <form id="disciplerForm">
+
+    <!-- Personal Information -->
+    <div class="section-title">👤 Personal Information</div>
+    <div class="mb-3">
+      <label>Full Name</label>
+      <input type="text" class="form-control" name="FullName" required>
+    </div>
+    <div class="mb-3">
+      <label>Email Address</label>
+      <input type="email" class="form-control" name="Email" required>
+    </div>
+    <div class="mb-3">
+      <label>Phone Number</label>
+      <input type="text" class="form-control" name="Phone">
+    </div>
+    <div class="mb-3">
+      <label>Preferred Method of Contact</label><br>
+      <input type="checkbox" name="ContactMethod" value="Email"> Email
+      <input type="checkbox" name="ContactMethod" value="Phone"> Phone
+      <input type="checkbox" name="ContactMethod" value="WhatsApp"> WhatsApp
+    </div>
+    <div class="mb-3">
+      <label>Church or School Affiliation (if any)</label>
+      <input type="text" class="form-control" name="Affiliation">
     </div>
 
-    <form id="disciplerSignUp">
-      <!-- Personal Info -->
-      <h5>👤 Personal Information</h5>
-      <div class="mb-3">
-        <label class="form-label">Full Name</label>
-        <input type="text" class="form-control" name="fullName" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Email Address</label>
-        <input type="email" class="form-control" name="email" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Phone Number</label>
-        <input type="text" class="form-control" name="phone">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Preferred Method of Contact</label><br>
-        <label><input type="checkbox" name="contactMethod" value="Email"> Email</label> 
-        <label><input type="checkbox" name="contactMethod" value="Phone"> Phone</label> 
-        <label><input type="checkbox" name="contactMethod" value="WhatsApp"> WhatsApp</label>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Church or School Affiliation (if any)</label>
-        <input type="text" class="form-control" name="affiliation">
-      </div>
+    <!-- Discipleship Preferences -->
+    <div class="section-title">🌱 Discipleship Preferences</div>
+    <div class="mb-3">
+      <label>Age Group You Feel Called to Disciple</label><br>
+      <input type="checkbox" name="AgeGroup" value="8–11 years"> 8–11 years
+      <input type="checkbox" name="AgeGroup" value="12–15 years"> 12–15 years
+      <input type="checkbox" name="AgeGroup" value="16–18 years"> 16–18 years
+      <input type="checkbox" name="AgeGroup" value="Open"> Open to any age
+    </div>
+    <div class="mb-3">
+      <label>Ministry Area You’re Most Drawn To</label><br>
+      <input type="checkbox" name="MinistryArea" value="Discipleship"> Discipleship
+      <input type="checkbox" name="MinistryArea" value="Mentorship & Coaching"> Mentorship & Coaching
+      <input type="checkbox" name="MinistryArea" value="Arts & Creativity"> Arts & Creativity
+      <input type="checkbox" name="MinistryArea" value="Compassion"> Compassion
+      <input type="checkbox" name="MinistryArea" value="Bible Storytelling"> Bible Storytelling
+    </div>
+    <div class="mb-3">
+      <label>Availability</label><br>
+      <input type="checkbox" name="Availability" value="Weekly"> Weekly
+      <input type="checkbox" name="Availability" value="Biweekly"> Biweekly
+      <input type="checkbox" name="Availability" value="Monthly"> Monthly
+      <input type="checkbox" name="Availability" value="Other"> Other
+    </div>
 
-      <!-- Preferences -->
-      <h5>🌱 Discipleship Preferences</h5>
-      <div class="mb-3">
-        <label class="form-label">Age Group You Feel Called to Disciple</label><br>
-        <label><input type="checkbox" name="ageGroup" value="8–11"> 8–11 years</label> 
-        <label><input type="checkbox" name="ageGroup" value="12–15"> 12–15 years</label> 
-        <label><input type="checkbox" name="ageGroup" value="16–18"> 16–18 years</label> 
-        <label><input type="checkbox" name="ageGroup" value="Any"> Open to any age</label>
+    <!-- Safeguarding Commitment -->
+    <div class="section-title">🛡 Safeguarding Commitment</div>
+    <p class="fst-italic small">Every child deserves to feel safe, seen, and protected.</p>
+    <div class="mb-3">
+      <input type="checkbox" name="Safeguarding" value="Agreed" required>
+      I have read and agree to the Safeguarding & Protection Commitment document.
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Signature</label>
+        <input type="text" class="form-control" name="Signature">
       </div>
+      <div class="col-md-6 mb-3">
+        <label>Date</label>
+        <input type="date" class="form-control" name="Date">
+      </div>
+    </div>
 
-      <div class="mb-3">
-        <label class="form-label">Ministry Area You’re Most Drawn To</label><br>
-        <label><input type="checkbox" name="ministryArea" value="Discipleship"> Discipleship</label><br>
-        <label><input type="checkbox" name="ministryArea" value="Mentorship & Coaching"> Mentorship & Coaching</label><br>
-        <label><input type="checkbox" name="ministryArea" value="Arts & Creativity"> Arts & Creativity</label><br>
-        <label><input type="checkbox" name="ministryArea" value="Compassion"> Compassion</label><br>
-        <label><input type="checkbox" name="ministryArea" value="Bible Storytelling"> Bible Storytelling</label>
-      </div>
+    <!-- Open Text -->
+    <div class="section-title">💬 Tell Us More</div>
+    <textarea class="form-control mb-3" name="WhyDisciple" rows="4" placeholder="Why do you feel called to disciple? What gifts or experiences do you bring?"></textarea>
 
-      <div class="mb-3">
-        <label class="form-label">Availability</label><br>
-        <label><input type="checkbox" name="availability" value="Weekly"> Weekly</label> 
-        <label><input type="checkbox" name="availability" value="Biweekly"> Biweekly</label> 
-        <label><input type="checkbox" name="availability" value="Monthly"> Monthly</label> 
-        <label><input type="checkbox" name="availability" value="Other"> Other</label>
-      </div>
+    <!-- Stay Connected -->
+    <div class="section-title">📬 Stay Connected</div>
+    <div class="mb-3">
+      <input type="checkbox" name="StayConnected" value="Yes"> I’d like to receive updates, training invitations, and encouragement.
+    </div>
 
-      <!-- Safeguarding -->
-      <h5>🛡 Safeguarding Commitment</h5>
-      <blockquote class="small text-muted">
-        Every child deserves to feel safe, seen, and protected.
-      </blockquote>
-      <div class="mb-3">
-        <label>
-          <input type="checkbox" name="safeguarding" required>
-          I have read and agree to the 
-          <a href="safeguarding.pdf" target="_blank">Safeguarding & Protection Commitment</a>.
-        </label>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Signature</label>
-        <input type="text" class="form-control" name="signature">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Date</label>
-        <input type="date" class="form-control" name="date">
-      </div>
-
-      <!-- Tell Us More -->
-      <h5>💬 Tell Us More</h5>
-      <textarea class="form-control mb-3" rows="4" name="tellUsMore"
-        placeholder="Why do you feel called to disciple? What gifts or experiences do you bring?"></textarea>
-
-      <!-- Stay Connected -->
-      <h5>📬 Stay Connected</h5>
-      <div class="mb-3">
-        <label><input type="checkbox" name="stayConnected" value="Yes"> I’d like to receive updates, training invitations, and encouragement from Cross & Crown.</label>
-      </div>
-
-      <!-- Submit -->
-      <div class="text-center mt-4">
-        <button type="submit" class="btn btn-success px-4 py-2">✨ Submit Sign-Up</button>
-      </div>
-    </form>
-
-    <!-- Final Blessing -->
+    <!-- Submit -->
     <div class="text-center mt-4">
-      <blockquote class="fst-italic">🙏 Thank you for stepping into this sacred calling. We’ll be in touch soon to walk with you.</blockquote>
+      <button type="submit" class="btn btn-submit">Submit Form</button>
     </div>
-  </div>
-</section>
+  </form>
+</div>
 
 <script>
- document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("disciplerSignUp");
-
-  form.addEventListener("submit", e => {
+  document.getElementById("disciplerForm").addEventListener("submit", function(e){
     e.preventDefault();
 
-    // build JSON payload
-    const data = {
-      fullName: form.querySelector("[name='Full Name']").value,
-      email: form.querySelector("[name='Email Address']").value,
-      phone: form.querySelector("[name='Phone Number']").value,
-      contactMethod: [...form.querySelectorAll("[name='Preferred Contact']:checked")].map(cb => cb.value).join(", "),
-      affiliation: form.querySelector("[name='Affiliation']").value,
-      ageGroup: [...form.querySelectorAll("[name='Age Group']:checked")].map(cb => cb.value).join(", "),
-      ministryArea: [...form.querySelectorAll("[name='Ministry Area']:checked")].map(cb => cb.value).join(", "),
-      availability: [...form.querySelectorAll("[name='Availability']:checked")].map(cb => cb.value).join(", "),
-      safeguarding: form.querySelector("[name='Safeguarding']").checked ? "Yes" : "No",
-      signature: form.querySelector("[name='Signature']").value,
-      date: form.querySelector("[name='Date']").value,
-      tellUsMore: form.querySelector("[name='Why Called']").value,
-      stayConnected: form.querySelector("[name='Stay Connected']").checked ? "Yes" : "No"
-    };
-
-    fetch("https://script.google.com/macros/s/AKfycbwOW1PQIeM1cR7A5WbCRJsOrvWJGYLE7YkoIRRTF4xk_Bbaxa0ZUcMc5E0LgllNhlAR3g/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbyOVO-duDM74je64EQfdxe1jmLVJ5latYbq2qDcViBtOJzyKtyYOqb3lSIGZojD_SHh/exec", {
       method: "POST",
-      body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" }
+      body: new FormData(this)
     })
-      .then(res => res.json())
-      .then(response => {
-        alert("🌿 Thank you! Your sign-up has been received.");
-        form.reset();
-      })
-      .catch(err => alert("❌ Error: " + err.message));
+    .then(response => alert("✅ Thank you! Your sign-up has been submitted."))
+    .catch(error => alert("❌ Something went wrong. Please try again."));
   });
-});
-
 </script>
-<style> 
-.form-card {
-  background: #fff;
-  border-radius: 16px;
-  max-width: 700px;
-  margin: auto;
-}
-
-.form-card h5 {
-  margin-top: 1.5rem;
-  color: #2b6a4e;
-  font-weight: 600;
-}
-
-.form-card label {
-  font-weight: 500;
-  color: #333;
-}
-
-.form-card input[type="checkbox"] {
-  margin-right: 6px;
-}
-
-.form-card button {
-  background: linear-gradient(90deg, #2b6a4e, #3ba776);
-  border: none;
-  border-radius: 30px;
-  color: #fff;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.form-card button:hover {
-  transform: scale(1.05);
-  background: linear-gradient(90deg, #3ba776, #2b6a4e);
-}
-
-</style>
+ <style>
+    body {
+      background: #f4f9f7;
+      font-family: "Segoe UI", sans-serif;
+    }
+    .form-container {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    h2 {
+      font-weight: bold;
+      color: #2c5f2d;
+    }
+    .section-title {
+      margin-top: 25px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1c3d3a;
+    }
+    .btn-submit {
+      background: #2c5f2d;
+      color: #fff;
+      border-radius: 30px;
+      padding: 10px 25px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn-submit:hover {
+      background: #3d7a41;
+    }
+    textarea {
+      resize: none;
+    }
+  </style>
 
 
   </main>
