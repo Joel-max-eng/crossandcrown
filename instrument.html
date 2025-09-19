@@ -456,11 +456,11 @@ footer small, footer div {
     <div class="nav-label">About Us</div>
   </div>
   <div class="nav-item">
-    <a href="ministry.html" class="nav-btn">
-      <i class="fa-solid fa-people-group"></i>
-    </a>
-     <div class="nav-label">Ministries</div>
-  </div>
+  <a href="javascript:void(0)" class="nav-btn" onclick="openMinistriesPopup()">
+    <i class="fa-solid fa-people-group"></i>
+  </a>
+  <div class="nav-label">Ministries</div>
+</div>
   <div class="nav-item">
     <a href="#" class="nav-btn">
       <i class="fa-solid fa-photo-film"></i>
@@ -473,14 +473,495 @@ footer small, footer div {
     </a>
     <div class="nav-label">Partners</div>
   </div>
-  <div class="nav-item">
-    <a href="#" class="nav-btn">
-      <i class="fa-solid fa-envelope"></i>
-    </a>
-    <div class="nav-label">Contact Us</div>
-  </div>
+   <div class="nav-item">
+  <a href="javascript:void(0);" class="nav-btn" onclick="openContactPopup()">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+  <div class="nav-label">Contact Us</div>
+</div>
 </nav>
 </header>
+<!-- ================= CONTACT US POPUP ================= -->
+<div id="contactPopup" class="popup-overlay" onclick="overlayClose(event, 'contactPopup')">
+  <div class="popup-content contact-box">
+    <span class="popup-close" onclick="closeContactPopup()">&times;</span>
+    <h3 class="mb-4">📞 Contact Us</h3>
+
+    <div class="contact-list">
+      <!-- Phone -->
+      <div class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+447354261430">+44 7354 261430</a>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:info@crossandcrown.org">info@crossandcrown.org</a>
+      </div>
+
+      <!-- Facebook -->
+      <div class="contact-item">
+        <i class="fa-brands fa-facebook"></i>
+        <a href="https://facebook.com/YourPageName" target="_blank">Our Facebook Page</a>
+      </div>
+
+      <!-- Instagram -->
+      <div class="contact-item">
+        <i class="fa-brands fa-instagram"></i>
+        <a href="https://instagram.com/YourPageName" target="_blank">@OurInstagram</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= STYLES ================= -->
+<style>
+/* Contact box styling */
+.contact-box {
+  max-width: 500px;
+  text-align: left;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.contact-item i {
+  font-size: 20px;
+  color: #4CAF50;
+  min-width: 25px;
+  text-align: center;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.contact-item a:hover {
+  color: #4CAF50;
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+function openContactPopup() {
+  document.getElementById("contactPopup").classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+function closeContactPopup() {
+  document.getElementById("contactPopup").classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+</script>
+
+<!-- ================= MINISTRIES SECTION ================= -->
+
+
+<!-- ================= MAIN POPUP WITH ICONS ================= -->
+<div id="ministriesPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeMinistriesPopup()">&times;</span>
+    <h3 class="mb-3">Our Ministries</h3>
+
+    <div class="ministries-grid">
+      <div class="ministry-item" onclick="openMinistry('cycle')">
+        🚴‍♀ Cycle of Hope
+      </div>
+      <div class="ministry-item" onclick="openMinistry('alabaster')">
+        🎶 Alabaster Voices
+      </div>
+      <div class="ministry-item" onclick="openMinistry('puppet')">
+        🎭 Puppet Parables
+      </div>
+      <div class="ministry-item" onclick="openMinistry('sdg')">
+        🌱 SDGs Disciples
+      </div>
+      <div class="ministry-item" onclick="openMinistry('walk')">
+        👧 Walk With Her
+      </div>
+      <div class="ministry-item" onclick="openMinistry('kick')">
+        ⚽ KICK Academy
+      </div>
+      <div class="ministry-item" onclick="openMinistry('kings')">
+        👑 Kings Kids
+      </div>
+      <div class="ministry-item" onclick="openMinistry('bible')">
+      📖 Bible Inspirations
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= INDIVIDUAL MINISTRY POPUPS ================= -->
+<!-- ================= CYCLE OF HOPE POPUP ================= -->
+<div id="cycle" class="popup-overlay ministry-detail">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeMinistry('cycle')">&times;</span>
+    
+    <h3>🚲 Cycle of Hope</h3>
+    <h4 class="text-primary">Empowering Girls to Ride Boldly into Their Future</h4>
+    
+    <p>
+      Cycle of Hope is a transformative initiative designed to empower and engage girls through a dynamic blend of faith, skill-building, and fun. 
+      Rooted in discipleship and driven by purpose, the program keeps girls actively involved in Bible sessions, life skills workshops, and cycling training — 
+      helping them build healthy habits, overcome fear, and make wise choices.
+    </p>
+    
+    <p>
+      By staying engaged in positive activities, girls learn to resist negative peer pressure, including early sexual activity, and stay focused on their education and personal growth.
+    </p>
+
+    <h4>🌄 More Than a Ride</h4>
+    <ul>
+      <li>💪 <strong>Confidence</strong></li>
+      <li>🧠 <strong>Resilience</strong></li>
+      <li>💜 <strong>Values</strong> that guide them both on and off the bike — including perseverance, courage, and determination</li>
+    </ul>
+
+    <h4>🎯 Our Goal</h4>
+    <p>
+      We aim to empower <strong>300 girls by the end of 2027</strong>, each one supported through our Sponsorship Program — from early childhood all the way to university.
+    </p>
+    <ul>
+      <li>🚴 Our pilot project begins with 30 girls from the slums, with an additional 30 expected to join by the end of August</li>
+      <li>🤝 Each participant will be matched with a mentor or guide committed to walking with her for at least three years</li>
+      <li>📖 Together, we build a foundation of discipleship, mentorship, and mobility</li>
+    </ul>
+
+    <h4>🙌 How You Can Help</h4>
+    <p>We are currently in need of:</p>
+    <ul>
+      <li>30 mountain bikes for girls aged 8 to 13</li>
+      <li>Protective gear including helmets and guards</li>
+      <li>Financial support to expand our reach and sustain our programs</li>
+    </ul>
+    <p>
+      💌 Donations can be made through our <a href="donate.html" class="text-success"><strong>Donate Page</strong></a>, 
+      and we’re happy to share our account number upon request. Soon, all giving options will be available directly on our website.
+    </p>
+
+    <h4>💛 Partner With Us: Sponsor a Girl’s Journey</h4>
+    <p>Your donation can make a lasting impact in the life of a girl aged 8–13:</p>
+    <ul>
+      <li>£115 provides one high-quality mountain bike</li>
+      <li>£500 covers a bike plus three workshop events over a two-year period</li>
+      <li>£800 sponsors a bike, training gear, five workshop events, and transport for two years</li>
+    </ul>
+    <p>
+      Each donor will receive regular updates throughout the mentorship journey, including stories, photos, and progress reports. 
+      You’ll also be issued a <strong>Donor Appreciation Certificate</strong>, available to view and download directly from this website.
+    </p>
+
+    <h4>🤝 Ready to Partner With Us?</h4>
+    <p>
+      To support this initiative:
+    </p>
+    <ul>
+      <li>Visit our <a href="contact.html" class="text-info">Contact Us page</a></li>
+      <li>📱 Send us a WhatsApp message</li>
+      <li>📧 Drop us an email</li>
+    </ul>
+
+    <p>
+      We’d love to hear from you — and together, help girls ride boldly into their future!
+    </p>
+  </div>
+</div>
+
+<div id="alabaster" class="popup-overlay ministry-detail">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeMinistry('alabaster')">&times;</span>
+    <h3>🎶 Alabaster Voices</h3>
+    <p>A worship band training girls in music, restoring dignity and purpose through discipleship and creativity.</p>
+  </div>
+</div>
+
+<div id="puppet" class="popup-overlay ministry-detail">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeMinistry('puppet')">&times;</span>
+    <h3>🎭 Puppet Parables</h3>
+    <p>Engaging Bible storytelling through puppetry, making Scripture fun and interactive for children and youth.</p>
+  </div>
+</div>
+
+<div id="sdg" class="popup-overlay ministry-detail">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeMinistry('sdg')">&times;</span>
+    <h3>🌱 SDGs Disciples</h3>
+    <p>Teaching youth discipleship values through Bible lessons linked with the UN Sustainable Development Goals.</p>
+  </div>
+</div>
+
+<div id="walk" class="popup-overlay ministry-detail">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeMinistry('walk')">&times;</span>
+    <h3>👧 Walk With Her</h3>
+    
+    <div class="ministry-text">
+      <p>👣 <strong>Walk With Her</strong> x 🚲 <strong>Cycle of Hope</strong><br>
+      <em>A Mentorship Journey in Motion</em></p>
+
+      <p>Walk With Her is our heart-centered mentorship program designed to walk alongside girls from marginalized communities with dignity, discipleship, and direction. Through life skills, encouragement, camps, and career guidance, we help girls discover their identity, build resilience, and dream boldly.</p>
+
+      <p>Now, through our partnership with Cycle of Hope, this journey takes on new momentum.</p>
+
+      <p>Each Walk With Her mentee receives a bicycle, becoming the first participants in Cycle of Hope — a ministry that blends faith, skill-building, and fun activities to keep girls engaged, focused, and flourishing.</p>
+
+      <h4>🌸 Walk With Her Activities:</h4>
+      <ul>
+        <li>Life Skills Sessions</li>
+        <li>Bible clubs and crafts facilitated by staff and volunteers. Girls learn from heroes in the Bible like Esther, Mary, Hannah, and many more.</li>
+        <li>Encouragement Calls from mentors and disciplers</li>
+        <li>Walk With Her Camps with workshops, games, sports, crafts, and discipleship</li>
+        <li>One-on-One Mentorship with trained volunteers</li>
+        <li>Match & Connect with career role models and guides</li>
+      </ul>
+
+      <h4>🚲 Cycle of Hope Integration:</h4>
+      <ul>
+        <li>Weekly cycling drills and training</li>
+        <li>Bible sessions and life skills workshops</li>
+        <li>Positive engagement to build healthy habits and wise choices</li>
+        <li>Protection against negative peer pressure, including early sexual activity</li>
+      </ul>
+
+      <h4>💜 Our Vision</h4>
+      <p>To see every girl rise above fear, reclaim her voice, and move forward — spiritually, emotionally, and physically.</p>
+
+      <p><strong>Tagline:</strong><br>
+      "She is mentored. She is mobile. She is moving forward in faith."</p>
+    </div>
+  </div>
+</div>
+
+
+<div id="kick" class="popup-overlay ministry-detail">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeMinistry('kick')">&times;</span>
+    
+    <h3>⚽ Introducing <span style="color:#4CAF50;">KICK Academy</span></h3>
+    
+    <p>
+      <strong>KICK Academy</strong> is a dynamic ministry that transforms young lives through 
+      <em>sport, support, and spiritual formation</em>.  
+      By blending high-quality football and dance coaching with values-based mentorship, 
+      KICK creates spaces where movement meets meaning — and every child is invited to grow 
+      in confidence, character, and faith.
+    </p>
+
+    <p>
+      We’re proud to partner with KICK Academy as part of our ministry expression, bringing 
+      this powerful model into schools and communities that need it most.
+    </p>
+
+    <h4>🎯 Outreach Launch</h4>
+    <p>
+      <strong>Innami & House of Hope – December 2025</strong><br>
+      Our first outreach begins at <strong>Innami Education Centre in Kitale, Kenya</strong> — 
+      a school serving nearly 400 children, with the majority being girls from the surrounding 
+      slums of Misemwa, Forkland, Matisi, and Mitume. These girls face immense challenges, often 
+      dropping out of school due to poverty and neglect. We believe they are pivotal to 
+      community transformation — and we’re committed to walking with them.
+    </p>
+
+    <p>
+      We’re launching with <strong>50 girls</strong> in December, and hope to expand to 
+      <strong>200 girls</strong> across Innami and the nearby House of Hope Academy, once our 
+      partnership is confirmed.
+    </p>
+
+    <h4>👧 Why Girls?</h4>
+    <p>
+      In many communities, the boy child receives more attention and support, while girls are 
+      overlooked. We’re changing that narrative.  
+      Our outreach is intentionally designed to <strong>affirm, equip, and empower girls</strong> — 
+      helping them discover their God-given potential through play, purpose, and partnership.
+    </p>
+
+    <h4>⚽ What We Offer</h4>
+    <ul style="text-align:left; margin: 0 auto; max-width: 500px;">
+      <li>Football & dance coaching linked to transformational values</li>
+      <li>Life discussions that connect sport to spiritual growth</li>
+      <li>Inclusive, safe spaces for personal development</li>
+      <li>Church partnerships to sustain long-term impact</li>
+    </ul>
+
+    <blockquote style="margin-top:20px; font-style:italic; color:#4CAF50; font-weight:600;">
+      “She plays. She grows. She leads. She belongs.”
+    </blockquote>
+  </div>
+</div>
+
+
+<!-- ================= KINGS KIDS POPUP ================= -->
+<div id="kings" class="popup-overlay ministry-detail">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeMinistry('kings')">&times;</span>
+    
+    <h3>👑 Kings Kids International (KKI) Expression in Our Ministry</h3>
+    
+    <p>
+      Since <strong>2019</strong>, we’ve actively embraced the expression of 
+      <strong>Kings Kids International (KKI)</strong> within our ministry — especially among our sponsored children.  
+    </p>
+    
+    <blockquote style="font-style: italic; border-left: 4px solid #6a5acd; padding-left: 1rem; color: #444;">
+      “To lead children, youth, and families in knowing God, bringing Him joy, and together making Him and His Kingdom known.”
+    </blockquote>
+
+    <h4>✨ We live out this mission through:</h4>
+    <ul>
+      <li>📖 Bible clubs and discipleship sessions</li>
+      <li>📝 Scripture memorization activities</li>
+      <li>🌱 Youth empowerment programs — previously hosted at Active Believers Mission in Kitale, Kenya</li>
+    </ul>
+
+    <h4>🌍 COVID Response: Empowering Girls</h4>
+    <p>During the COVID-19 pandemic (2020–2021), we held special empowerment sessions for girls, including:</p>
+    <ul>
+      <li>📚 Bible reading activities led by qualified volunteers</li>
+      <li>❓ Q&A sessions where girls could ask questions, receive guidance, and grow in faith</li>
+      <li>💜 Safe, nurturing spaces for spiritual and emotional support</li>
+    </ul>
+
+    <h4>📱 Stay Connected</h4>
+    <p>
+      We invite you to explore our social media platforms for quality, educational posts delivered by our Kings Kids members.  
+      🎥 Videos are also available in our gallery on this platform — showcasing the joy, growth, and impact of this ministry.
+    </p>
+    <p>
+      💌 Drop us an encouragement note, share our videos within your networks, and help us spread the word!
+    </p>
+
+    <h4>🙏 Looking Ahead</h4>
+    <p>
+      We pray that our partnership with <strong>KKI</strong> will continue to grow — expanding our reach and deepening our impact for the Lord’s Kingdom.
+    </p>
+
+    <p>
+      🌐 To learn more about Kings Kids International, visit  
+      <a href="https://kki.global" target="_blank" class="text-primary"><strong>kki.global</strong></a>
+    </p>
+  </div>
+</div>
+
+<div id="bible" class="popup-overlay ministry-detail">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeMinistry('bible')">&times;</span>
+    <h3>📖 Bible Inspirations</h3>
+    <p>Daily scripture sharing, devotionals, and reflections designed to inspire spiritual growth and strengthen faith in everyday life.</p>
+  </div>
+</div>
+
+
+<!-- ================= STYLES ================= -->
+<style>
+/* Overlay popup */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  overflow-y: auto;
+  padding: 40px 20px;
+  animation: fadeOut 0.3s ease forwards;
+}
+
+.popup-overlay.active {
+  display: block;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Popup content box */
+.popup-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+.popup-content.large { max-width: 800px; }
+
+/* Close button */
+.popup-close {
+  position: absolute;
+  top: 12px; right: 16px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+}
+.popup-close:hover { color: red; }
+
+/* Ministries grid */
+.ministries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.ministry-item {
+  padding: 18px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.ministry-item:hover {
+  background: #4CAF50;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+@keyframes fadeOut { from {opacity: 1;} to {opacity: 0;} }
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+function openMinistriesPopup() {
+  document.getElementById("ministriesPopup").classList.add("active");
+  document.body.style.overflow = "hidden"; // disable background scroll
+}
+function closeMinistriesPopup() {
+  document.getElementById("ministriesPopup").classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+function openMinistry(id) {
+  document.getElementById(id).classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+function closeMinistry(id) {
+  document.getElementById(id).classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+function overlayClose(event, id) {
+  if (event.target.classList.contains("popup-overlay")) {
+    closeMinistry(id);
+    closeMinistriesPopup();
+  }
+}
+</script>
 
  <!-- Contact Quick Links -->
 <div class="contact-icons">
