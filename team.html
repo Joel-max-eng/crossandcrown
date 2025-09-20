@@ -98,8 +98,6 @@ h2, h4 {
     .brand-logo {
       display:flex; align-items:center; gap:10px; color:#7b3b12;
     }
-  
-
     /* HERO slider */
     .hero {
       min-height: 58vh;
@@ -318,6 +316,7 @@ footer small, footer div {
   flex-direction: column;
   min-height: 105px;  /* ensure space for icons + labels */
 }
+
 /* Nav container */
 .nav-icons {
   display: flex;
@@ -376,6 +375,7 @@ footer small, footer div {
   text-shadow: 0 1px 2px rgba(0,0,0,0.25);
   white-space: normal; /* allow wrapping instead of cutting */
 }
+
   </style>
 </head>
 <body>
@@ -393,7 +393,7 @@ footer small, footer div {
     </div>
   </div>
   <section class="tagline text-center py-3">
-  <h2>"Discipling Young hearts,mentoring leaders"</h2>
+  <h2>"Discipling Young Hearts, Mentoring Leaders"</h2>
 </section>
 
   <style>/* Logo styling */
@@ -455,7 +455,7 @@ footer small, footer div {
     </a>
     <div class="nav-label">About Us</div>
   </div>
- <div class="nav-item">
+  <div class="nav-item">
   <a href="javascript:void(0)" class="nav-btn" onclick="openMinistriesPopup()">
     <i class="fa-solid fa-people-group"></i>
   </a>
@@ -473,7 +473,7 @@ footer small, footer div {
     </a>
     <div class="nav-label">Partners</div>
   </div>
-   <div class="nav-item">
+  <div class="nav-item">
   <a href="javascript:void(0);" class="nav-btn" onclick="openContactPopup()">
     <i class="fa-solid fa-envelope"></i>
   </a>
@@ -1077,7 +1077,6 @@ function overlayClose(event, id) {
   }
 }
 </script>
-
  <!-- Contact Quick Links -->
 <div class="contact-icons">
   <div class="contact-item">
@@ -1179,7 +1178,6 @@ function overlayClose(event, id) {
   background: #ffffff; /* pure red */
   border: 1px solid #000;
 }
-
 
 /* Labels */
 .contact-label {
@@ -1302,7 +1300,7 @@ function closeMap() {
 
 .tagline h2 {
   font-family: 'Fredoka One', 'Comic Neue', sans-serif; /* kid-friendly bold font */
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 900;
   color: #fff; /* warm orange */
   text-decoration: none;
@@ -1323,273 +1321,112 @@ function closeMap() {
 }
 
 </style>
-<!-- 🌟 Donate to Cross & Crown Ministries -->
-<section id="donate-general" class="donate-section container">
-  <h2 class="section-title">🌟 Donate to Cross & Crown Ministries</h2>
-  <p class="intro-text">
-    💛 One Mission. Many Ministries. Eternal Impact.  
-    Your gift fuels a movement of <b>hope, discipleship, and transformation</b> across every corner of our work.  
-    From mentoring girls through <b>Cycle of Hope</b>, to nurturing musical discipleship in <b>Alabaster Voices</b>, 
-    to supporting <b>school sponsorships, workshops, and outreach</b>—your generosity makes it all possible.
-  </p>
-  <blockquote class="bible-verse">
-    “Each of you should give what you have decided in your heart to give… for God loves a cheerful giver.” – 2 Corinthians 9:7
-  </blockquote>
+ <header>
+    <style>
+    /* Modal background */
+    .modal-overlay {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: 9999;
+    }
 
-  <!-- Donation Support Areas -->
-  <h3 class="sub-title">💸 What Your Donation Supports</h3>
-  <div class="row g-4 support-options">
-    <div class="col-md-6 col-lg-4">
-      <div class="support-card">
-        <h4>🚴‍♀ Cycle of Hope</h4>
-        <p>Mentorship, bicycles, protective gear, and discipleship journeys.</p>
+    /* Modal container */
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    /* Close button */
+    .modal-close {
+      position: absolute;
+      top: 10px; right: 15px;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #444;
+    }
+    .modal-close:hover { color: red; }
+
+    /* Flexbox for image + text */
+    .team-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    /* Circular photo */
+    .team-photo {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* Text beside photo */
+    .team-info {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Trigger Button -->
+  <div>
+    <button class="btn-team" onclick="openTeamModal()">Meet Our Team</button>
+  </div>
+
+  <!-- Modal -->
+  <div id="teamModal" class="modal-overlay" style="display:none;">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeTeamModal()">&times;</span>
+
+      <!-- Header with image + text -->
+      <div class="team-header">
+        <img src="your-photo.jpg" alt="Team Member" class="team-photo">
+        <div class="team-info">
+          <h3>🎥 Media & Outreach Coordination</h3>
+          <p>
+            We’re blessed to have <strong>Meshack Masheti</strong> serving as our Media and Outreach 
+            Coordinator for the KICK Academy launch. Meshack is an experienced graphics designer, 
+            skilled coordinator, and a passionate disciple-maker, having studied Discipleship 
+            at YWAM Burundi.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="col-md-6 col-lg-4">
-      <div class="support-card">
-        <h4>🎶 Alabaster Voices</h4>
-        <p>Instruments, music training, and spiritual growth for girls.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-4">
-      <div class="support-card">
-        <h4>🎓 School Sponsorships</h4>
-        <p>Tuition, uniforms, and learning materials for students.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-4">
-      <div class="support-card">
-        <h4>🚌 Trips & Workshops</h4>
-        <p>Transport, meals, and training for youth and volunteers.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-4">
-      <div class="support-card">
-        <h4>🏠 Ministry Operations</h4>
-        <p>Rent, staff support, and volunteer logistics.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-4">
-      <div class="support-card">
-        <h4>🍽 Food Donations</h4>
-        <p>Meals for families and children in need.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-4">
-      <div class="support-card">
-        <h4>💼 Mentorship Activities</h4>
-        <p>Coaching, discipleship, and outreach events.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-4">
-      <div class="support-card">
-        <h4>🎁 General Support</h4>
-        <p>Wherever the need is greatest.</p>
-      </div>
+
+      <!-- More text continues below -->
+      <p>
+        He will be capturing the heart of our outreach through photos and video, ensuring every 
+        moment — from coaching to conversation — is documented with excellence and care.
+      </p>
+
+      <p>
+        Meshack’s creative eye and ministry heart help us tell the story of transformation, 
+        dignity, and hope as it unfolds among the girls of Innami and House of Hope.
+      </p>
     </div>
   </div>
 
-  <!-- How to Give -->
-  <div class="give-box mt-5">
-    <h3>🔐 How to Give</h3>
-    <p>All donations can be made securely using the link below. We welcome:</p>
-    <ul>
-      <li>One-time gifts</li>
-      <li>Monthly giving</li>
-      <li>Sponsorships and designated donations</li>
-      <li>Donations in <b>Kenya shillings (KSHS)</b></li>
-      <li>International support (USD, GBP, EUR, etc.)</li>
-    </ul>
-    <p class="note"><b>Our official bank account will be available soon.</b></p>
-    <p>💌 For questions or custom giving options, please contact us at: 
-      <a href="mailto:donate@crossandcrownministries.org">donate@crossandcrownministries.org</a>
-    </p>
-   <a href="javascript:void(0)" class="btn btn-primary" onclick="showNotice()">Give Now</a>
-  </div>
-
-  <!-- Donor Recognition -->
-  <div class="recognition-box mt-5">
-    <h3>🧡 Donor Recognition</h3>
-    <ul>
-      <li>A personalized <b>Certificate of Appreciation</b></li>
-      <li>Updates on ministry impact across all programs</li>
-      <li>The joy of knowing your gift is changing lives</li>
-    </ul>
-  </div>
-
-<!-- Certificate Preview Section -->
-<div class="certificate-download text-center mt-5">
-  <h4>🎖 Donor Certificate</h4>
-  <p>Click below to view a sample certificate of appreciation.</p>
-  <button class="btn btn-success" onclick="openCertificate()">
-    👁 View Sample
-  </button>
-</div>
-
-<!-- Modal -->
-<div id="certificateModal" class="modal">
-  <div class="modal-content text-center">
-    <span class="close" onclick="closeCertificate()">&times;</span>
-    <h5 class="mb-3">🎖 Sample Donor Certificate</h5>
-    <img src="Certificate_2.jpg" alt="Sample Donor Certificate" class="certificate-img">
-    <div class="mt-3">
-      <a href="Certificate_2.jpg" download class="btn btn-primary">💾 Save Certificate</a>
-    </div>
-  </div>
-</div>
-
-  <!-- Spread the Word -->
-  <div class="thankyou-box mt-5">
-    <h3>📣 Spread the Word</h3>
-    <p>Share this page with friends, family, and partners.  
-    Together, we’re building a legacy of <b>faith, empowerment, and unity</b>.</p>
-  </div>
-</section>
+  <script>
+    function openTeamModal() {
+      document.getElementById("teamModal").style.display = "flex";
+    }
+    function closeTeamModal() {
+      document.getElementById("teamModal").style.display = "none";
+    }
+  </script>
 
 
-<!-- ================= STYLES ================= -->
-<style>
-  /* Modal background */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background: rgba(0,0,0,0.7);
-  animation: fadeIn 0.3s ease;
-}
-
-/* Modal content */
-.modal-content {
-  background: #fff;
-  margin: 5% auto;
-  padding: 20px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 650px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  animation: slideDown 0.4s ease;
-}
-
-/* Certificate image */
-.certificate-img {
-  max-width: 100%;
-  height: auto;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-}
-
-/* Close button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-}
-.close:hover {
-  color: red;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-@keyframes slideDown {
-  from {transform: translateY(-30px); opacity: 0;}
-  to {transform: translateY(0); opacity: 1;}
-}
-.donate-section {
-  padding: 40px 20px;
-  background: linear-gradient(180deg,#fdfcff 0%, #f9f9ff 100%);
-  border-radius: 16px;
-  margin: 20px auto;
-}
-.section-title {
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: 800;
-}
-.intro-text { font-size: 1.1rem; text-align: center; margin-bottom: 20px; }
-.bible-verse {
-  font-style: italic;
-  text-align: center;
-  margin: 20px auto;
-  max-width: 600px;
-  border-left: 4px solid #ff9800;
-  padding-left: 12px;
-}
-
-.support-options .support-card {
-  background: #fff;
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  height: 100%;
-  transition: transform 0.3s ease;
-}
-.support-options .support-card:hover { transform: translateY(-4px); }
-
-.give-box, .recognition-box, .thankyou-box {
-  background: #fff;
-  padding: 22px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  margin-top: 20px;
-}
-.give-box .btn-primary {
-  margin-top: 10px;
-  border-radius: 25px;
-  padding: 10px 20px;
-}
-
-.certificate-download {
-  background: #f9fff8;
-  padding: 22px;
-  border-radius: 12px;
-  border: 1px dashed #28a745;
-}
-.certificate-img {
-  max-width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-.btn-success {
-  background: #28a745;
-  padding: 10px 20px;
-  border-radius: 25px;
-  color: #fff;
-  text-decoration: none;
-}
-.btn-success:hover { background: #218838; }
-</style>
-<script>
-function showNotice() {
-  alert("🏦 Our Bank Account is in progress — coming soon!\n🙏 Thank you for your generosity.");
-}
-function openCertificate() {
-  document.getElementById("certificateModal").style.display = "block";
-}
-function closeCertificate() {
-  document.getElementById("certificateModal").style.display = "none";
-}
-function openCertificate() {
-  document.getElementById("certificateModal").style.display = "block";
-}
-function closeCertificate() {
-  document.getElementById("certificateModal").style.display = "none";
-}
-
-</script>
-
-  </main>
 
 <!-- Goodbye Section -->
 <div class="goodbye-section text-center">
@@ -1663,7 +1500,7 @@ function closeCertificate() {
 
       <div class="col-md-4 mb-4">
         <h5>Get Involved</h5>
-        <a href="#">Donate an Instrument</a>
+        <a href="instrument.html">Donate an Instrument</a>
         <a href="donate.html">Donate a Bicycle</a>
         <a href="give.html">Donate / Give</a>
          <a href="mentor-form.html">Walk with her</a>
