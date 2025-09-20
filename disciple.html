@@ -488,31 +488,30 @@ footer small, footer div {
     <span class="popup-close" onclick="closeContactPopup()">&times;</span>
     <h3 class="mb-4">📞 Contact Us</h3>
 
-    <div class="contact-list">
-      <!-- Phone -->
-      <div class="contact-item">
-        <i class="fa-solid fa-phone"></i>
-        <a href="tel:+447354261430">+44 7354 261430</a>
+    <!-- Contact Form -->
+    <form id="contactForm" onsubmit="sendEmail(event)">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
       </div>
 
-      <!-- Email -->
-      <div class="contact-item">
-        <i class="fa-solid fa-envelope"></i>
-        <a href="mailto:info@crossandcrown.org">info@crossandcrown.org</a>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+254 700 000000" required>
       </div>
 
-      <!-- Facebook -->
-      <div class="contact-item">
-        <i class="fa-brands fa-facebook"></i>
-        <a href="https://facebook.com/YourPageName" target="_blank">Our Facebook Page</a>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
       </div>
 
-      <!-- Instagram -->
-      <div class="contact-item">
-        <i class="fa-brands fa-instagram"></i>
-        <a href="https://instagram.com/YourPageName" target="_blank">@OurInstagram</a>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
       </div>
-    </div>
+
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
   </div>
 </div>
 
@@ -524,35 +523,44 @@ footer small, footer div {
   text-align: left;
 }
 
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 10px;
+.form-group {
+  margin-bottom: 15px;
 }
 
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 18px;
-}
-
-.contact-item i {
-  font-size: 20px;
-  color: #4CAF50;
-  min-width: 25px;
-  text-align: center;
-}
-
-.contact-item a {
-  text-decoration: none;
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
   color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
 }
-.contact-item a:hover {
-  color: #4CAF50;
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #4CAF50;
+}
+
+.btn-submit {
+  background: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background: #45a049;
 }
 </style>
 
@@ -562,11 +570,28 @@ function openContactPopup() {
   document.getElementById("contactPopup").classList.add("active");
   document.body.style.overflow = "hidden";
 }
+
 function closeContactPopup() {
   document.getElementById("contactPopup").classList.remove("active");
   document.body.style.overflow = "auto";
 }
+
+function sendEmail(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("fullName").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const subject = `Message from ${name}`;
+  const body = `Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+
+  // Replace with your email
+  window.location.href = `mailto:info@crossandcrown.org?subject=${encodeURIComponent(subject)}&body=${body}`;
+}
 </script>
+
 
 <!-- ================= MINISTRIES SECTION ================= -->
 
@@ -684,36 +709,99 @@ function closeContactPopup() {
 
 <!-- Alabaster Voices Modal -->
 <div id="alabaster" class="popup-overlay ministry-detail">
-  <div class="popup-content" style="max-height:90vh; overflow-y:auto; background:#fff7f0; border:2px solid #ffb380;">
-    <span class="popup-close" onclick="closeMinistry('alabaster')">&times;</span>
-    <h3 style="color:#ff7e5f;">🌸 Alabaster Voices</h3>
+  <div class="popup-content" style="max-height:90vh; overflow-y:auto; background:#fff7f0; border:2px solid #ffb380; padding:20px; border-radius:12px;">
+  <span class="popup-close" onclick="closeMinistry('alabaster')">&times;</span>
+  
+  <h3 style="color:#ff7e5f;">🌸 Alabaster Voices</h3>
+  <p><em>"Every girl has a story. Every instrument tells a story."</em></p>
 
-    <p><em>"Every girl has a story. Every instrument tells a story."</em></p>
+  <p>
+    Alabaster Voices is a ministry born from a deep burden: to restore dignity, hope, and purpose
+    to vulnerable girls through worship, music, and discipleship. Inspired by the woman in the
+    Gospels who poured out her alabaster jar at Jesus’ feet, we believe every girl carries a
+    precious treasure within her — a gift waiting to be poured out for God’s glory.
+  </p>
 
-    <p>
-      Alabaster Voices is a ministry born from a deep burden: to restore dignity, hope, and purpose
-      to vulnerable girls through worship, music, and discipleship. Inspired by the woman in the
-      Gospels who poured out her alabaster jar at Jesus’ feet, we believe every girl carries a
-      precious treasure within her — a gift waiting to be poured out for God’s glory.
-    </p>
+  <p>
+    Though society rejected her, Jesus honored her. He said, <strong>“She has done a beautiful thing
+    to me,”</strong> and promised her story would be remembered wherever the gospel is preached.
+    Today, many girls live that same story — abandoned, silenced, or told they don’t matter.
+    But we see what Jesus sees: beauty, purpose, and a voice worth hearing.
+  </p>
 
-    <h4 style="color:#ff914d;">🎶 Our Vision</h4>
-    <ul>
-      <li>Discover and nurture their musical talents</li>
-      <li>Learn to play instruments and lead worship</li>
-      <li>Shine boldly in public spaces as vessels of healing and transformation</li>
-      <li>Restore dignity and hope to those who feel forgotten</li>
-      <li>Mentor them spiritually, emotionally, and practically</li>
-    </ul>
+  <h4 style="color:#ff914d;">🎶 Our Vision</h4>
+  <ul>
+    <li>Discover and nurture their musical talents</li>
+    <li>Learn to play instruments and lead worship</li>
+    <li>Shine boldly in public spaces as vessels of healing and transformation</li>
+    <li>Restore dignity and hope to those who feel forgotten</li>
+    <li>Mentor them spiritually, emotionally, and practically</li>
+    <li>Empower them to live boldly for Jesus</li>
+  </ul>
 
-    <h4 style="color:#ff914d;">🎺 How You Can Help</h4>
-    <ul>
-      <li>Brass: Trumpets, Trombones, Tubas, Cornets, Euphoniums</li>
-      <li>Woodwind: Flutes, Clarinets, Saxophones</li>
-      <li>Strings & Keys: Guitars, Pianos</li>
-      <li>Percussion: Drums</li>
-    </ul>
+  <h4 style="color:#ff914d;">🎺 How You Can Help</h4>
+  <p>
+    We are currently seeking donations of gently used musical instruments to help launch and expand
+    this ministry. Specifically, we need:
+  </p>
+  <ul>
+    <li>Brass: Trumpets, Trombones, Tubas, Cornets, Euphoniums</li>
+    <li>Woodwind: Flutes, Clarinets, Saxophones</li>
+    <li>Strings & Keys: Guitars, Pianos</li>
+    <li>Percussion: Drums</li>
+  </ul>
 
+  <p>
+    Your gift can help a girl find her voice, reclaim her story, and rise in worship. Just like the
+    alabaster jar, what you pour out will become a beautiful offering remembered for generations.
+  </p>
+
+  <h4 style="color:#ff914d;">🎼 Partner With Alabaster Voices</h4>
+  <p><strong>Help a girl find her voice. Help her rise in worship.</strong></p>
+
+  <p>
+    Alabaster Voices is seeking partners who believe in the power of music to heal, restore, and
+    transform lives. While our preferred method is sourcing instruments overseas — where bulk
+    shipping and tax exemptions make it more affordable — we also welcome cash donations to help us
+    purchase instruments locally when needed.
+  </p>
+
+  <h4 style="color:#ff914d;">🎁 Why It Matters</h4>
+  <p>
+    Buying musical instruments in Kenya is often costly, but every donation helps us reach more girls
+    with the tools they need to shine. Whether you give a little or a lot, your gift becomes part of
+    a girl’s story — a story of dignity, worship, and transformation.
+  </p>
+
+  <blockquote style="font-style:italic; color:#cc5c33; border-left:4px solid #ffb380; padding-left:10px;">
+    Every instrument becomes a vessel of worship. Every gift becomes a seed of hope.
+  </blockquote>
+
+  <p>
+    If you prefer to send a cash donation, please reach out to us directly — we’ll gladly guide you
+    through the process. Together, we can equip these girls to rise, shine, and glorify God through
+    music.
+  </p>
+
+  <h4 style="color:#ff914d;">🎶 Alabaster Voices Instrument Budget Appeal</h4>
+  <p><em>"Every girl has a story. Every instrument tells a story."</em></p>
+
+  <p>
+    Alabaster Voices empowers vulnerable girls to rise in dignity through worship, music, and
+    discipleship. We equip them to discover their musical gifts, lead in worship, and shine for Jesus
+    — just like the woman with the alabaster jar who poured out her treasure at His feet.
+  </p>
+
+  <h4 style="color:#ff914d;">💛 How to Give</h4>
+  <ul>
+    <li>🎺 Gently used instruments (Brass, Woodwind, Guitar, Piano, Drums)</li>
+    <li>💰 Cash donations — we’ll guide you through the process</li>
+  </ul>
+
+  <p>
+    📩 To donate or partner with us, please reach out directly. <br>
+    🙏 Your gift helps a girl rise in worship, reclaim her story, and glorify God.
+  </p>
     <h4 style="color:#ff7e5f; margin-top:20px;">📊 Instrument Budget Guide</h4>
     <div style="overflow-x:auto;">
       <table style="width:100%; border-collapse: collapse; margin-top:15px; font-size:15px;">
@@ -808,7 +896,7 @@ function closeContactPopup() {
   <div class="popup-content">
     <span class="popup-close" onclick="closeMinistry('puppet')">&times;</span>
     <h3>🎭 Puppet Parables</h3>
-    <p>Engaging Bible storytelling through puppetry, making Scripture fun and interactive for children and youth.</p>
+    <p>Teaching biblical truths through engaging puppet theatre</p>
   </div>
 </div>
 
@@ -974,12 +1062,69 @@ function closeContactPopup() {
 </div>
 
 <div id="bible" class="popup-overlay ministry-detail">
-  <div class="popup-content">
+  <div class="popup-content" style="max-height:90vh; overflow-y:auto; background:#fff7f0; border:2px solid #d1b3ff; padding:20px; border-radius:12px;">
     <span class="popup-close" onclick="closeMinistry('bible')">&times;</span>
-    <h3>📖 Bible Inspirations</h3>
-    <p>Daily scripture sharing, devotionals, and reflections designed to inspire spiritual growth and strengthen faith in everyday life.</p>
+    
+    <h3 style="color:#8c52ff;">📖 BibleInspirations</h3>
+    <p><em>"Where Children Share God’s Word Creatively"</em></p>
+
+    <p>
+      BibleInspirations is a vibrant ministry with a heart to reach children through creative media
+      content — especially online Bible story videos shared by children, for children.
+    </p>
+
+    <p>
+      We select stories from the Bible and help children retell them in imaginative, engaging ways —
+      using drama, storytelling, art, and digital media. These videos are designed to inspire, teach,
+      and encourage other children watching, helping them understand God’s Word in a way that feels
+      personal, joyful, and relatable.
+    </p>
+
+    <p>
+      By empowering children to become storytellers of Scripture, we nurture their confidence,
+      creativity, and spiritual growth — while also planting seeds of faith in the hearts of their
+      peers.
+    </p>
+
+    <h4 style="color:#a366ff;">📖 Support BibleInspirations</h4>
+    <p><strong>Help Us Equip the Next Generation of Storytellers</strong></p>
+    <p>
+      To grow this vision, we’re seeking supporters who can help us build a space where creativity
+      and faith flourish.
+    </p>
+
+    <h4 style="color:#a366ff;">🎁 What You Can Donate</h4>
+    <ul>
+      <li>🎥 Video camera – to record high-quality Bible story sessions</li>
+      <li>🎙 Studio equipment – for sound, lighting, and editing</li>
+      <li>📸 Photography gear – to capture behind-the-scenes moments and promotional content</li>
+      <li>📚 Kids Bibles – to help children explore and share God’s Word</li>
+      <li>📓 Journaling books – for reflection, creativity, and spiritual growth</li>
+      <li>👕 T-shirts for printing – for team identity and outreach visibility</li>
+    </ul>
+
+    <p>
+      💛 Financial donations are also welcome and will help cover essential costs — including studio
+      rent, production materials, and training sessions.
+    </p>
+
+    <h4 style="color:#a366ff;">🤝 How to Give</h4>
+    <p>
+      To support BibleInspirations:
+      <ul>
+        <li>Visit our <strong>Donate Page</strong></li>
+        <li>Reach out via <strong>WhatsApp, email, or our Contact Us</strong> page</li>
+        <li>We’ll be happy to connect, share more, and walk with you in this journey</li>
+      </ul>
+    </p>
+
+    <blockquote style="font-style:italic; color:#663399; border-left:4px solid #d1b3ff; padding-left:10px;">
+      Every gift helps us raise a generation of children who know God, bring Him joy, and make His
+      Kingdom known — creatively, boldly, and together.
+    </blockquote>
   </div>
 </div>
+
 
 
 <!-- ================= STYLES ================= -->
@@ -1078,10 +1223,11 @@ function overlayClose(event, id) {
 }
 </script>
 
+
  <!-- Contact Quick Links -->
 <div class="contact-icons">
   <div class="contact-item">
-    <a href="tel:+254720453556" class="contact-btn call">
+    <a href="tel:+254720453556" class="contact-btn">
       <i class="fa-solid fa-phone"></i>
     </a>
     <div class="contact-label">CALL US</div>
@@ -1090,7 +1236,7 @@ function overlayClose(event, id) {
   <div class="divider"></div>
 
   <div class="contact-item">
-    <a href="mailto:info@crossandcrown.org" class="contact-btn email">
+    <a href="mailto:info@crossandcrown.org" class="contact-btn">
       <i class="fa-solid fa-envelope"></i>
     </a>
     <div class="contact-label">EMAIL US</div>
@@ -1099,7 +1245,7 @@ function overlayClose(event, id) {
   <div class="divider"></div>
 
   <div class="contact-item">
-    <button class="contact-btn location" onclick="openMap()">
+    <button class="contact-btn" onclick="openMap()">
       <i class="fa-solid fa-location-dot"></i>
     </button>
     <div class="contact-label">FIND US</div>
@@ -1124,32 +1270,31 @@ function overlayClose(event, id) {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-wrap: nowrap;   /* force single row */
+  flex-wrap: nowrap;
   margin: 0.6rem;
   padding: 0.6rem 0.8rem;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  overflow-x: auto; /* allow scroll if too tight */
+  overflow-x: auto;
 }
 
 /* Divider line */
 .divider {
   width: 1px;
-  background: #000; /* dark black */
+  background: #000;
   margin: 0 8px;
   height: 45px;
-  flex-shrink: 0;   /* don’t collapse */
+  flex-shrink: 0;
   align-self: center;
 }
 
-/* Keep items small enough for phones */
+/* Contact items */
 .contact-item {
   flex: 1 1 auto;
   text-align: center;
   min-width: 60px;
 }
-
 
 /* Icon buttons */
 .contact-btn {
@@ -1160,26 +1305,16 @@ function overlayClose(event, id) {
   height: 58px;
   border-radius: 50%;
   font-size: 22px;
-  color: #fff;
+  color: #000; /* always black */
+  background: #fff;
+  border: 2px solid #000;
   margin: auto;
   transition: all 0.3s ease;
 }
 
-/* Colors */
-.contact-btn.call {
-  background: #ffffff; /* green */
-  border: 1px solid #000;
+.contact-btn i {
+  color: #000; /* ensure icon itself is black */
 }
-.contact-btn.email {
-  background: linear-gradient(135deg, #ffffff, #ffffff); /* red + white */
-  color: #000;
-  border: 1px solid #000;
-}
-.contact-btn.location {
-  background: #ffffff; /* pure red */
-  border: 1px solid #000;
-}
-
 
 /* Labels */
 .contact-label {
@@ -1192,18 +1327,19 @@ function overlayClose(event, id) {
 /* Hover effect */
 .contact-btn:hover {
   transform: scale(1.08);
+  background: #f2f2f2;
 }
 
 /* Quick Links Title */
 .quick-links-title {
-  background: #b71c1c; /* deep red */
+  background: #b71c1c;
   color: #fff;
   text-align: center;
   font-size: 0.8rem;
   font-weight: 600;
   padding: 0.5rem;
   border-radius: 0 0 8px 8px;
-  margin: -0.4rem 0.6rem 0; /* align with container */
+  margin: -0.4rem 0.6rem 0;
 }
 
 /* Responsive tweaks */
@@ -1288,7 +1424,7 @@ function openMap() {
 
 function closeMap() {
   document.getElementById("mapModal").style.display = "none";
-  document.getElementById("mapContainer").innerHTML = ""; // remove iframe when closed
+  document.getElementById("mapContainer").innerHTML = "";
 }
 </script>
 
