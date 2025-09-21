@@ -2097,9 +2097,9 @@ blockquote {
 </footer>
 
 <!-- ================= NEWS POPUP ================= -->
-<div id="newsPopup" class="popup-overlay">
-  <div class="popup-content">
-    <span class="popup-close" onclick="closeNewsPopup()">&times;</span>
+<div id="newsPopup" class="news-popup-overlay">
+  <div class="news-popup-content">
+    <span class="news-popup-close" onclick="closeNewsPopup()">&times;</span>
     <h3>📰 Latest News</h3>
     <p>🚫 No news at the moment. Please check back later!</p>
   </div>
@@ -2119,8 +2119,8 @@ blockquote {
   color: #ff5722; /* warm orange hover */
 }
 
-/* Popup overlay */
-.popup-overlay {
+/* News Popup overlay (unique) */
+.news-popup-overlay {
   display: none;
   position: fixed;
   z-index: 9999;
@@ -2130,25 +2130,31 @@ blockquote {
   justify-content: center;
   align-items: center;
 }
-.popup-overlay.active {
+.news-popup-overlay.active {
   display: flex;
 }
-.popup-content {
+.news-popup-content {
   background: #fff;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 20px 25px;
+  border-radius: 14px;
   max-width: 450px;
   text-align: center;
-  animation: fadeIn 0.3s ease;
+  position: relative;
+  animation: newsFadeIn 0.3s ease;
 }
-.popup-close {
+.news-popup-close {
   position: absolute;
   top: 12px;
   right: 18px;
-  font-size: 24px;
+  font-size: 26px;
+  font-weight: bold;
   cursor: pointer;
+  color: #b71c1c;
 }
-@keyframes fadeIn {
+.news-popup-close:hover {
+  color: #ff5722;
+}
+@keyframes newsFadeIn {
   from {opacity: 0; transform: scale(0.9);}
   to {opacity: 1; transform: scale(1);}
 }
@@ -2165,6 +2171,7 @@ function closeNewsPopup() {
   document.body.style.overflow = "auto";
 }
 </script>
+
 
 </body>
 </html>
