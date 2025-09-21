@@ -461,12 +461,12 @@ footer small, footer div {
   </a>
   <div class="nav-label">Ministries</div>
 </div>
-  <div class="nav-item">
-    <a href="#" class="nav-btn">
-      <i class="fa-solid fa-photo-film"></i>
-    </a>
-    <div class="nav-label">Media & Gallery</div>
-  </div>
+  <div class="nav-item" onclick="openMediaPopup()">
+  <a href="javascript:void(0)" class="nav-btn">
+    <i class="fa-solid fa-photo-film"></i>
+  </a>
+  <div class="nav-label">Media & Gallery</div>
+</div>
   <div class="nav-item">
     <a href="patners.html" class="nav-btn">
       <i class="fa-solid fa-handshake"></i>
@@ -481,6 +481,8 @@ footer small, footer div {
 </div>
 </nav>
 </header>
+
+
 
 <!-- ================= CONTACT US POPUP ================= -->
 <div id="contactPopup" class="popup-overlay" onclick="overlayClose(event, 'contactPopup')">
@@ -592,6 +594,101 @@ function sendEmail(event) {
 }
 </script>
 
+<!-- ================= MEDIA & GALLERY SECTION ================= -->
+
+<!-- ================= MAIN POPUP WITH ICONS ================= -->
+<div id="mediaPopup" class="popup-overlay" onclick="overlayClose(event, 'mediaPopup')">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <span class="popup-close" onclick="closeMediaPopup()">&times;</span>
+    <h3 class="mb-3">Media & Gallery</h3>
+
+    <div class="ministries-grid">
+      <div class="ministry-item" onclick="openMedia('photos')">
+        📷 Photos
+      </div>
+      <div class="ministry-item" onclick="openMedia('videos')">
+        🎥 Videos
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= PHOTOS POPUP ================= -->
+<div id="photos" class="popup-overlay ministry-detail" onclick="overlayClose(event, 'photos')">
+  <div class="popup-content large" onclick="event.stopPropagation()" style="max-height:90vh; overflow-y:auto;">
+    <span class="popup-close" onclick="closeMedia('photos')">&times;</span>
+    <h3>📷 Photo Gallery</h3>
+
+    <div class="gallery-grid">
+      <img src="logo.jpg" alt="Photo 1">
+      <img src="photo2.jpg" alt="Photo 2">
+      <img src="photo3.jpg" alt="Photo 3">
+      <img src="photo4.jpg" alt="Photo 4">
+    </div>
+  </div>
+</div>
+
+<!-- ================= VIDEOS POPUP ================= -->
+<div id="videos" class="popup-overlay ministry-detail" onclick="overlayClose(event, 'videos')">
+  <div class="popup-content large" onclick="event.stopPropagation()" style="max-height:90vh; overflow-y:auto;">
+    <span class="popup-close" onclick="closeMedia('videos')">&times;</span>
+    <h3>🎥 Video Gallery</h3>
+
+    <div class="gallery-grid">
+      <video controls>
+        <source src="video1.mp4" type="video/mp4">
+      </video>
+      <video controls>
+        <source src="video2.mp4" type="video/mp4">
+      </video>
+      <video controls>
+        <source src="video3.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+<!-- ================= STYLES (reuse ministries) ================= -->
+<style>
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.gallery-grid img,
+.gallery-grid video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+function openMediaPopup() {
+  document.getElementById("mediaPopup").classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+function closeMediaPopup() {
+  document.getElementById("mediaPopup").classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+function openMedia(id) {
+  document.getElementById(id).classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+function closeMedia(id) {
+  document.getElementById(id).classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+function overlayClose(event, id) {
+  if (event.target.classList.contains("popup-overlay")) {
+    document.getElementById(id).classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+}
+</script>
 
 <!-- ================= MINISTRIES SECTION ================= -->
 
@@ -892,19 +989,167 @@ function sendEmail(event) {
 </div>
 
 
-<div id="puppet" class="popup-overlay ministry-detail">
+<div id="puppet" class="popup-overlay ministry-detail"> 
   <div class="popup-content">
     <span class="popup-close" onclick="closeMinistry('puppet')">&times;</span>
-    <h3>🎭 Puppet Parables</h3>
-    <p>Teaching biblical truths through engaging puppet theatre</p>
+    <h3>🎭 Puppet Parables – Program Overview</h3>
+
+    <div class="popup-scroll">
+      <h4>🌟 Mission Statement</h4>
+      <p><em>“Engaging Bible storytelling through puppetry — making Scripture fun, interactive, and unforgettable for children and youth.”</em></p>
+
+      <h4>📖 Our Story</h4>
+      <p>
+        Puppet Parables was born out of a passion to make God’s Word come alive for children.
+      </p>
+      <p>
+        While serving with YWAM England in the children’s ministry department, my son Jeremy and I received a scholarship 
+        from One Way UK and Kings Kids England to attend a three-day national Puppet Festival. This event brought together 
+        some of the best puppeteers from across the UK, offering world-class training and workshops.
+      </p>
+      <p>
+        It was there that we learned how to deliver engaging Bible stories through puppets, create interactive shows, 
+        and even explored advanced techniques like blacklight (UV) puppetry.
+      </p>
+      <p>
+        God confirmed the vision He had already placed in my heart — to use puppetry as a creative tool to reach children.
+      </p>
+
+      <h4>🎪 Today, Puppet Parables seeks to:</h4>
+      <ul>
+        <li>🎓 Bring puppetry to schools as part of assemblies and life-skills programs</li>
+        <li>🎪 Host Bible clubs where children not only watch but also learn to perform with puppets</li>
+        <li>📱 Create puppet shows for social media, reaching children and families everywhere</li>
+        <li>🙌 Train children and youth to use puppetry as a form of evangelism, discipleship, and creative expression</li>
+      </ul>
+
+      <h4>💡 Why Puppet Parables?</h4>
+      <p>Children learn best when they are engaged. Puppets grab attention, break down walls, and make learning fun.</p>
+      <ul>
+        <li>The Bible becomes relatable and interactive</li>
+        <li>Children participate, not just listen</li>
+        <li>Hard lessons are made gentle and memorable</li>
+        <li>It creates safe spaces for kids to laugh, ask questions, and grow in faith</li>
+      </ul>
+
+      <h4>🎯 How We Deliver It</h4>
+      <ul>
+        <li>🏫 <strong>School Assemblies</strong> – Short, impactful puppet shows with Bible lessons</li>
+        <li>🎭 <strong>Weekly Puppet Clubs</strong> – Where kids learn puppetry skills and rehearse skits</li>
+        <li>🌍 <strong>Community Outreach</strong> – Puppet shows in villages, streets, and churches</li>
+        <li>📺 <strong>Online Kids Shows</strong> – Short puppet skits on social media to teach God’s Word</li>
+      </ul>
+
+      <h4>💛 Our Request for Support</h4>
+      <p>
+        We invite you to partner with us to bring the joy of Puppet Parables to thousands of children in Kenya.
+      </p>
+      <p>You can support by:</p>
+      <ul>
+        <li>Donating via the “Give” button on our website</li>
+        <li>Sending us an email through our Contact Us form</li>
+        <li>Volunteering as a puppeteer or trainer</li>
+      </ul>
+      <p>
+        Together, we can raise a generation of children who love the Bible — and love sharing it with others.
+      </p>
+
+      <h4>📅 Coming Events</h4>
+      <ul>
+        <li>
+          <strong>Innami Education Centre – January 9th</strong><br>
+          🕒 Time: 3 PM to 4 PM<br>
+          📖 Theme Story: The Good Samaritan<br>
+          👥 Actors: 3
+        </li>
+        <li>
+          <strong>Innami Education Centre – January 16th</strong><br>
+          🕒 Time: 3 PM to 4 PM<br>
+          📖 Theme Story: The Fall<br>
+          👥 Actors: 4
+        </li>
+      </ul>
+      <p>
+        We will confirm other event dates before the year ends.  
+        You can also follow our news using the <strong>News page</strong> on our homepage.
+      </p>
+    </div>
   </div>
 </div>
 
 <div id="sdg" class="popup-overlay ministry-detail">
   <div class="popup-content">
     <span class="popup-close" onclick="closeMinistry('sdg')">&times;</span>
-    <h3>🌱 SDGs Disciples</h3>
-    <p>Teaching youth discipleship values through Bible lessons linked with the UN Sustainable Development Goals.</p>
+    <h3>🌱 SDGs Disciples: Small Disciples Growing</h3>
+
+    <div class="popup-scroll">
+      <h4>🌟 Vision</h4>
+      <p>
+        To raise a generation of Christ-like children and youth who love God, love people, and care for creation — 
+        living out biblical truth in every area of life through the lens of the Sustainable Development Goals.
+      </p>
+
+      <h4>🎯 Mission</h4>
+      <p>
+        SDG Disciples empowers children and young people aged 7 to 18 to live out their faith practically by learning 
+        about the world’s needs, embracing God’s Word, and taking action — goal by goal. Through Bible storytelling, 
+        Scripture-based teaching, mentorship, creative worship, and hands-on activities, we inspire young disciples 
+        to be agents of change in their communities and beyond.
+      </p>
+
+      <h4>📌 What We Do</h4>
+      <ul>
+        <li><strong>Bible Storytelling & Lessons:</strong> Connecting Bible stories with real-life challenges</li>
+        <li><strong>SDG Learning:</strong> Teaching about the 17 Sustainable Development Goals in kid-friendly ways</li>
+        <li><strong>Practical Action:</strong> Organizing projects like clean-ups, food drives, and awareness campaigns</li>
+        <li><strong>Mentorship & Worship:</strong> Encouraging spiritual growth and leadership</li>
+        <li><strong>Events & Camps:</strong> Fun and impactful gatherings for children and youth</li>
+      </ul>
+
+      <h4>🤝 Get Involved</h4>
+      <p>Parents, churches, and schools are invited to partner with us! Whether you want your child to join, volunteer to help, or support our work, there’s a place for you here.</p>
+      <ol>
+        <li>Join a group near you</li>
+        <li>Volunteer with us</li>
+        <li>Donate to support our projects</li>
+      </ol>
+
+      <h4>📘 Sample Lesson Plan for SDGs Disciples</h4>
+      <p><strong>WEEK 1:</strong> Love Your Neighbour – The Good Samaritan</p>
+      <p><strong>Session:</strong> Innami Education Centre, 20th December<br>
+         <strong>Target group:</strong> Grade 6 students (class size: 35)<br>
+         <strong>Facilitator:</strong> Meshack</p>
+
+      <p><strong>Bible Passage:</strong> Luke 10:25–37<br>
+         <strong>SDG Focus:</strong> SDG 10 (Reduced Inequalities), SDG 16 (Peace, Justice & Strong Institutions)</p>
+
+      <h4>📖 Key Message</h4>
+      <p>Jesus teaches us to love and care for others, even if they are different from us. Everyone is our neighbor.</p>
+
+      <h4>🧠 Memory Verse</h4>
+      <p>“Love your neighbor as yourself.” – Mark 12:31</p>
+
+      <h4>🧩 Activities</h4>
+      <ul>
+        <li><strong>Story Reenactment:</strong> Children act out the parable.</li>
+        <li><strong>Heart Craft:</strong> Make paper hearts with ways to show kindness.</li>
+        <li><strong>Who’s My Neighbor?</strong> Match pictures of diverse people with kind actions.</li>
+        <li><strong>Bandage Relay:</strong> Pretend to care for an “injured traveler” in a fun relay game.</li>
+      </ul>
+
+      <h4>🌱 Discussion Questions</h4>
+      <ul>
+        <li>Who was the good neighbor in the story?</li>
+        <li>Why is it important to help those in need?</li>
+        <li>Do we treat everyone fairly and kindly?</li>
+      </ul>
+
+      <h4>🗓 Take-Home Challenge</h4>
+      <p>Do one kind act this week for someone who is not your close friend or is different from you.</p>
+
+      <h4>🙏 Prayer</h4>
+      <p><em>“Lord, help us to love everyone like You do. Teach us to be kind and fair to all. Amen.”</em></p>
+    </div>
   </div>
 </div>
 
@@ -1801,8 +2046,8 @@ blockquote {
 
 </style>
 
-  <!-- FOOTER -->
-  <footer id="contact">
+<!-- FOOTER -->
+<footer id="contact">
   <div class="container">
     <div class="row text-center">
       <div class="col-md-4 mb-4">
@@ -1812,6 +2057,9 @@ blockquote {
         <a href="mentor.html">Become a Mentor</a>
         <a href="resource.html">Resources</a>
         <a href="privacy.html">Privacy & Data Protection Policy</a>
+
+        <!-- 🔥 NEWS link -->
+        <a href="javascript:void(0)" class="news-link" onclick="openNewsPopup()">🔥 NEWS</a>
       </div>
 
       <div class="col-md-4 mb-4">
@@ -1819,23 +2067,25 @@ blockquote {
         <a href="instrument.html">Donate an Instrument</a>
         <a href="donate.html">Donate a Bicycle</a>
         <a href="give.html">Donate / Give</a>
-         <a href="mentor-form.html">Walk with her</a>
+        <a href="mentor-form.html">Walk with her</a>
       </div>
 
       <div class="col-md-4 mb-4">
         <h5>Connect With Us</h5>
         <div class="mb-2">
-          <div><strong>Phone:</strong>+254-720-453-556</div>
-          <div><strong>Email:</strong>info@crossandcrown.org</div>
+          <div><strong>Phone:</strong> +254-720-453-556</div>
+          <div><strong>Email:</strong> info@crossandcrown.org</div>
         </div>
         <div class="social-icons">
-  <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-  <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-  <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-</div>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://wa.me/447354261430" target="_blank" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
 
         <div class="mt-3">
-          <small>Kitale , Cherangani,near St marks Boys, Kenya</small>
+          <small>Kitale , Cherangani, near St marks Boys, Kenya</small>
         </div>
       </div>
     </div>
@@ -1846,67 +2096,75 @@ blockquote {
   </div>
 </footer>
 
+<!-- ================= NEWS POPUP ================= -->
+<div id="newsPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closeNewsPopup()">&times;</span>
+    <h3>📰 Latest News</h3>
+    <p>🚫 No news at the moment. Please check back later!</p>
+  </div>
+</div>
 
-  <!-- Bootstrap JS + Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- ================= STYLES ================= -->
+<style>
+/* NEWS link style */
+.news-link {
+  display: block;
+  font-weight: bold;
+  color: #b71c1c; /* fiery red */
+  margin-top: 6px;
+  transition: color 0.3s ease;
+}
+.news-link:hover {
+  color: #ff5722; /* warm orange hover */
+}
 
-  <script>
-    // Smooth scroll helper (used by nav buttons)
-    function scrollToId(id) {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+/* Popup overlay */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+.popup-overlay.active {
+  display: flex;
+}
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 450px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 24px;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+</style>
 
-    // Simple slider logic for hero area
-    (function(){
-      const slidesEl = document.getElementById('slides');
-      const slides = slidesEl.children;
-      const dotsWrap = document.getElementById('heroDots');
-      const total = slides.length;
-      let idx = 0, autoTimer = null;
+<!-- ================= SCRIPT ================= -->
+<script>
+function openNewsPopup() {
+  document.getElementById("newsPopup").classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+function closeNewsPopup() {
+  document.getElementById("newsPopup").classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+</script>
 
-      // create dots
-      for(let i=0;i<total;i++){
-        const d = document.createElement('div');
-        d.className = 'hero-dot' + (i===0? ' active':'');
-        d.dataset.i = i;
-        d.onclick = () => { goTo(parseInt(d.dataset.i)); };
-        dotsWrap.appendChild(d);
-      }
-
-      function refreshDots(){
-        const ds = dotsWrap.children;
-        for(let i=0;i<ds.length;i++){
-          ds[i].classList.toggle('active', i===idx);
-        }
-      }
-
-      function goTo(i){
-        idx = (i+total)%total;
-        slidesEl.style.transform = `translateX(${ -idx * 100 }%)`;
-        refreshDots();
-      }
-
-      function next(){
-        goTo(idx+1);
-      }
-
-      // auto play
-      autoTimer = setInterval(next, 5000);
-
-      // pause on hover
-      slidesEl.addEventListener('mouseenter', ()=> clearInterval(autoTimer));
-      slidesEl.addEventListener('mouseleave', ()=> autoTimer = setInterval(next, 5000));
-    })();
-
-    // Small accessibility: keyboard nav for hero dots
-    document.addEventListener('keydown', function(e){
-      if(e.key === 'ArrowRight'){
-        document.querySelector('.hero-dot.active')?.nextElementSibling?.click();
-      } else if(e.key === 'ArrowLeft'){
-        document.querySelector('.hero-dot.active')?.previousElementSibling?.click();
-      }
-    });
-  </script>
 </body>
 </html>
