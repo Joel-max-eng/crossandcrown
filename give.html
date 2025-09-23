@@ -1243,6 +1243,10 @@ function overlayClose(event, id) {
       <li>Inclusive, safe spaces for personal development</li>
       <li>Church partnerships to sustain long-term impact</li>
     </ul>
+    <p>
+      🌐 Follow up KICK Academy 
+      <a href="https://kick.org.uk" target="_blank" class="text-primary"><strong>Kick Academy</strong></a>
+    </p>
 
     <blockquote style="margin-top:20px; font-style:italic; color:#4CAF50; font-weight:600;">
       “She plays. She grows. She leads. She belongs.”
@@ -1269,6 +1273,7 @@ function overlayClose(event, id) {
 
     <h4>✨ We live out this mission through:</h4>
     <ul>
+       <li>📝  Open the book ,bible story telling in school assemblies.Story telling through short skits .Hot news for our  next outreach coming soon.</li>
       <li>📖 Bible clubs and discipleship sessions</li>
       <li>📝 Scripture memorization activities</li>
       <li>🌱 Youth empowerment programs — previously hosted at Active Believers Mission in Kitale, Kenya</li>
@@ -2034,13 +2039,15 @@ function closeCertificate() {
       <div class="col-md-4 mb-4">
         <h5>Quick Links</h5>
         <a href="statement.html">Our Statement of Faith</a>
-        <a href="disciple.html">Ready to Disicple?</a>
+        <a href="disciple.html">Ready to Disciple?</a>
         <a href="mentor.html">Become a Mentor</a>
         <a href="resource.html">Resources</a>
         <a href="privacy.html">Privacy & Data Protection Policy</a>
 
         <!-- 🔥 NEWS link -->
-        <a href="javascript:void(0)" class="news-link" onclick="openNewsPopup()">🔥 NEWS</a>
+         <a href="javascript:void(0)" class="news-link" onclick="openNewsPopup()">
+  <span class="flame">🔥</span> Outreach News <span class="flame">🔥</span>
+</a>
       </div>
 
       <div class="col-md-4 mb-4">
@@ -2058,7 +2065,7 @@ function closeCertificate() {
           <div><strong>Email:</strong> info@crossandcrown.org</div>
         </div>
         <div class="social-icons">
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.facebook.com/christhekingskids" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
           <a href="https://wa.me/447354261430" target="_blank" aria-label="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
@@ -2149,20 +2156,24 @@ function closeCertificate() {
 
 <!-- ================= STYLES ================= -->
 <style>
-.news-link {
+.news-link { 
   display: inline-block;
   font-weight: bold;
   font-size: 20px;
-  color: #b71c1c; /* fiery red */
-  text-transform: uppercase;
+  color: #ff5722; /* fiery red */
   letter-spacing: 1px;
-  animation: glowPulse 1.5s infinite;
   transition: transform 0.2s ease;
 }
 
 .news-link:hover {
   transform: scale(1.1); /* pop on hover */
   color: #ff5722; /* warm orange */
+}
+
+/* Glow only for flames */
+.flame {
+  display: inline-block;
+  animation: glowPulse 1.5s infinite;
 }
 
 @keyframes glowPulse {

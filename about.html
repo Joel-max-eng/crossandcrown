@@ -1244,6 +1244,10 @@ function overlayClose(event, id) {
       <li>Inclusive, safe spaces for personal development</li>
       <li>Church partnerships to sustain long-term impact</li>
     </ul>
+    <p>
+      🌐 Follow up KICK Academy 
+      <a href="https://kick.org.uk" target="_blank" class="text-primary"><strong>Kick Academy</strong></a>
+    </p>
 
     <blockquote style="margin-top:20px; font-style:italic; color:#4CAF50; font-weight:600;">
       “She plays. She grows. She leads. She belongs.”
@@ -1270,6 +1274,7 @@ function overlayClose(event, id) {
 
     <h4>✨ We live out this mission through:</h4>
     <ul>
+       <li>📝  Open the book ,bible story telling in school assemblies.Story telling through short skits .Hot news for our  next outreach coming soon.</li>
       <li>📖 Bible clubs and discipleship sessions</li>
       <li>📝 Scripture memorization activities</li>
       <li>🌱 Youth empowerment programs — previously hosted at Active Believers Mission in Kitale, Kenya</li>
@@ -1972,6 +1977,50 @@ function closeMap() {
 
     <hr style="margin:30px 0; border:1px solid #eee;">
 
+     <!-- ========== Joyce Second ========== -->
+    <img src="joyce.png" alt="Joyce B Kyungai" class="team-photo">
+    <div class="team-name">🌿 Co-Founder, Cross and Crown <br> Joyce B Kyungai</div>
+
+    <div class="team-message">
+      <p>
+        <strong>Joyce Kyungai</strong>, originally from Arusha, Tanzania, is a seasoned youth disciple-maker
+        with over 10 years of service through Youth With A Mission (YWAM). As a Discipleship Training School (DTS) leader,
+        she has mentored hundreds of teens and young adults, guiding them into deeper faith and purpose. 
+        Her leadership across multiple DTS programs has shaped a generation of passionate, grounded believers.
+      </p>
+
+      <p>
+        In 2012, Joyce joined her husband Emmanuel in Uganda to co-lead the teens and youth program at Childline Uganda. 
+        Together, they left a lasting legacy—empowering children with life skills, creativity, and spiritual depth. 
+        Their work sparked transformation and hope in communities often overlooked.
+      </p>
+
+      <p><strong>Joyce’s training includes:</strong></p>
+      <ul>
+        <li>DTS (Discipleship Training School)</li>
+        <li>SBS (School of Biblical Studies)</li>
+        <li>FMS (Family Ministry School)</li>
+      </ul>
+
+      <p>
+        She also trained at YWAM Muizenberg in South Africa, further deepening her global perspective and heart for missions.
+      </p>
+
+      <p>
+        Today, Joyce carries a vibrant vision to establish a prayer centre for children in Trans Nzoia, Kenya—
+        a sanctuary where young hearts can encounter God, grow in identity, and be equipped for life. 
+        Her passion is to see every child rise into the fullness of who God created them to be.
+      </p>
+
+      <p>
+        With her wealth of experience, spiritual depth, and unwavering love for youth, Joyce is a cornerstone
+        of Cross and Crown’s mission. Her presence ensures that every program is rooted in discipleship,
+        dignity, and divine purpose.
+      </p>
+    </div>
+
+    <hr style="margin:30px 0; border:1px solid #eee;">
+
     <!-- ========== Meshack Second ========== -->
     <img src="mesh.jpg" alt="Meshack Masheti" class="team-photo">
     <div class="team-name">🎥 Media & Outreach Coordination <br> Meshack Masheti</div>
@@ -2114,13 +2163,15 @@ blockquote {
       <div class="col-md-4 mb-4">
         <h5>Quick Links</h5>
         <a href="statement.html">Our Statement of Faith</a>
-        <a href="disciple.html">Ready to Disicple?</a>
+        <a href="disciple.html">Ready to Disciple?</a>
         <a href="mentor.html">Become a Mentor</a>
         <a href="resource.html">Resources</a>
         <a href="privacy.html">Privacy & Data Protection Policy</a>
 
         <!-- 🔥 NEWS link -->
-        <a href="javascript:void(0)" class="news-link" onclick="openNewsPopup()">🔥 NEWS</a>
+         <a href="javascript:void(0)" class="news-link" onclick="openNewsPopup()">
+  <span class="flame">🔥</span> Outreach News <span class="flame">🔥</span>
+</a>
       </div>
 
       <div class="col-md-4 mb-4">
@@ -2138,7 +2189,7 @@ blockquote {
           <div><strong>Email:</strong> info@crossandcrown.org</div>
         </div>
         <div class="social-icons">
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.facebook.com/christhekingskids" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
           <a href="https://wa.me/447354261430" target="_blank" aria-label="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
@@ -2229,20 +2280,24 @@ blockquote {
 
 <!-- ================= STYLES ================= -->
 <style>
-.news-link {
+.news-link { 
   display: inline-block;
   font-weight: bold;
   font-size: 20px;
-  color: #b71c1c; /* fiery red */
-  text-transform: uppercase;
+  color: #ff5722; /* fiery red */
   letter-spacing: 1px;
-  animation: glowPulse 1.5s infinite;
   transition: transform 0.2s ease;
 }
 
 .news-link:hover {
   transform: scale(1.1); /* pop on hover */
   color: #ff5722; /* warm orange */
+}
+
+/* Glow only for flames */
+.flame {
+  display: inline-block;
+  animation: glowPulse 1.5s infinite;
 }
 
 @keyframes glowPulse {
