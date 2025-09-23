@@ -790,10 +790,8 @@ function overlayClose(event, id) {
     <p>
       To support this initiative:
     </p>
-    <ul>
-      <li>Visit our <a href="contact.html" class="text-info">Contact Us page</a></li>
-      <li>📱 Send us a WhatsApp message</li>
-      <li>📧 Drop us an email</li>
+     <ul>
+      <li>Visit our <a href="mentor-form.html" class="text-info">Contact Us page</a></li>
     </ul>
 
     <p>
@@ -1703,164 +1701,119 @@ function closeMap() {
 }
 
 </style>
-<!-- ================== A-Z VALUES SECTION ================== -->
-<section id="az-values" class="container my-5">
-  <h2 class="text-center mb-4">🌿 A–Z Values of Our Discipleship Pillar</h2>
-  <h2 class="text-center mb-4">Click each letter individually to View the Content</h2>
+<!-- ================== RESOURCES SECTION ================== -->
+<section id="resources" class="container my-5">
+  <h2 class="text-center mb-4">📚 Downloadable Resources</h2>
+  <p class="text-center mb-5">Click the button below each title to download the PDF.</p>
 
-  <!-- Letters Grid -->
-  <div class="az-grid">
-    <!-- Example for A -->
-    <div class="az-item" onclick="openFlyer('A')">A</div>
-    <div class="az-item" onclick="openFlyer('B')">B</div>
-    <div class="az-item" onclick="openFlyer('C')">C</div>
-    <div class="az-item" onclick="openFlyer('D')">D</div>
-    <div class="az-item" onclick="openFlyer('E')">E</div>
-    <div class="az-item" onclick="openFlyer('F')">F</div>
-    <div class="az-item" onclick="openFlyer('G')">G</div>
-    <div class="az-item" onclick="openFlyer('H')">H</div>
-    <div class="az-item" onclick="openFlyer('I')">I</div>
-    <div class="az-item" onclick="openFlyer('J')">J</div>
-    <div class="az-item" onclick="openFlyer('K')">K</div>
-    <div class="az-item" onclick="openFlyer('L')">L</div>
-    <div class="az-item" onclick="openFlyer('M')">M</div>
-    <div class="az-item" onclick="openFlyer('N')">N</div>
-    <div class="az-item" onclick="openFlyer('O')">O</div>
-    <div class="az-item" onclick="openFlyer('P')">P</div>
-    <div class="az-item" onclick="openFlyer('Q')">Q</div>
-    <div class="az-item" onclick="openFlyer('R')">R</div>
-    <div class="az-item" onclick="openFlyer('S')">S</div>
-    <div class="az-item" onclick="openFlyer('T')">T</div>
-    <div class="az-item" onclick="openFlyer('U')">U</div>
-    <div class="az-item" onclick="openFlyer('V')">V</div>
-    <div class="az-item" onclick="openFlyer('W')">W</div>
-    <div class="az-item" onclick="openFlyer('X')">X</div>
-    <div class="az-item" onclick="openFlyer('Y')">Y</div>
-    <div class="az-item" onclick="openFlyer('Z')">Z</div>
+  <div class="pdf-grid">
+    <!-- PDF Item -->
+    <div class="pdf-item">
+      <h5>Why 'Good Friday'?</h5>
+      <p class="pdf-size">📄 1.2 MB</p>
+      <a href="pdfs/good-friday.pptx" download class="pdf-btn">⬇️ Download</a>
+    </div>
+
+    <div class="pdf-item">
+      <h5>The Sword Gideon</h5>
+      <p class="pdf-size">📄 950 KB</p>
+      <a href="pdfs/sword-gideon.pdf" download class="pdf-btn">⬇️ Download</a>
+    </div>
+
+    <div class="pdf-item">
+      <h5>Tackling Barriers to Girls' Education</h5>
+      <p class="pdf-size">📄 2.1 MB</p>
+      <a href="pdfs/barriers-girls-education.pdf" download class="pdf-btn">⬇️ Download</a>
+    </div>
+
+    <div class="pdf-item">
+      <h5>A Profile of Female Genital Mutilation – Kenya</h5>
+      <p class="pdf-size">📄 1.8 MB</p>
+      <a href="pdfs/fgm-kenya.pdf" download class="pdf-btn">⬇️ Download</a>
+    </div>
+
+    <div class="pdf-item">
+      <h5>Fresno Kids Curriculum Online</h5>
+      <p class="pdf-size">📄 3.0 MB</p>
+      <a href="pdfs/fresno-kids.pdf" download class="pdf-btn">⬇️ Download</a>
+    </div>
+
+    <div class="pdf-item">
+      <h5>Children’s Ministry Resource Guide</h5>
+      <p class="pdf-size">📄 2.7 MB</p>
+      <a href="pdfs/childrens-ministry-guide.pdf" download class="pdf-btn">⬇️ Download</a>
+    </div>
+
+    <div class="pdf-item">
+      <h5>New Christian Workbook</h5>
+      <p class="pdf-size">📄 1.5 MB</p>
+      <a href="pdfs/christian-workbook.pdf" download class="pdf-btn">⬇️ Download</a>
+    </div>
+
+    <div class="pdf-item">
+      <h5>Crosswinds Discipleship Tools</h5>
+      <p class="pdf-size">📄 2.4 MB</p>
+      <a href="pdfs/crosswinds-discipleship.pdf" download class="pdf-btn">⬇️ Download</a>
+    </div>
   </div>
 </section>
 
-<!-- ================== MODAL ================== -->
-<div id="flyerModal" class="flyer-modal">
-  <span class="flyer-close" onclick="closeFlyer()">&times;</span>
-  <img class="flyer-content" id="flyerImage" alt="A-Z Flyer">
-</div>
-
 <!-- ================== STYLES ================== -->
 <style>
-#az-values {
+#resources {
   background: #fdf9f3;
-  padding: 30px;
+  padding: 40px;
   border-radius: 12px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.1);
 }
 
-.az-grid {
+.pdf-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
-  gap: 12px;
-  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
 }
 
-.az-item {
+.pdf-item {
   background: #fff;
   border: 2px solid #4CAF50;
-  border-radius: 10px;
-  padding: 12px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
   transition: all 0.3s ease;
-  color: #4CAF50;
+}
+.pdf-item:hover {
+  background: #f6fff6;
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-.az-item:hover {
+.pdf-item h5 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.pdf-size {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.pdf-btn {
+  display: inline-block;
+  padding: 8px 14px;
   background: #4CAF50;
   color: white;
-  transform: scale(1.05);
-}
-
-/* Modal */
-.flyer-modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  padding-top: 60px;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
-}
-
-.flyer-content {
-  display: block;
-  margin: auto;
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-}
-
-.flyer-close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 35px;
   font-weight: bold;
-  color: white;
-  cursor: pointer;
-  transition: color 0.3s;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
-
-.flyer-close:hover {
-  color: red;
+.pdf-btn:hover {
+  background: #388e3c;
 }
 </style>
 
-<!-- ================== SCRIPT ================== -->
-<script>
-// Define flyer images for each letter
-const flyers = {
-  A: "flyers/A.jpg",
-  B: "flyers/B.jpg",
-  C: "flyers/C.jpg",
-  D: "flyers/D.jpg",
-  E: "flyers/E.jpg",
-  F: "flyers/F.jpg",
-  G: "flyers/G.jpg",
-  H: "flyers/H.jpg",
-  I: "flyers/I.jpg",
-  J: "flyers/J.jpg",
-  K: "flyersK.jpg",
-  L: "flyers/L.jpg",
-  M: "flyers/M.jpg",
-  N: "flyers/N.jpg",
-  O: "flyers/O.jpg",
-  P: "flyers/P.jpg",
-  Q: "flyers/Q.jpg",
-  R: "flyers/R.jpg",
-  S: "flyers/S.jpg",
-  T: "flyers/T.jpg",
-  U: "flyers/U.jpg",
-  V: "flyers/V.jpg",
-  W: "flyers/W.jpg",
-  X: "flyers/X.jpg",
-  Y: "flyers/Y.jpg",
-  Z: "flyers/Z.jpg"
-};
-
-// Open modal with flyer
-function openFlyer(letter) {
-  const modal = document.getElementById("flyerModal");
-  const img = document.getElementById("flyerImage");
-  img.src = flyers[letter] || "flyers/default.jpg"; // fallback
-  modal.style.display = "block";
-}
-
-// Close modal
-function closeFlyer() {
-  document.getElementById("flyerModal").style.display = "none";
-}
-</script>
   </main>
 
 <!-- Goodbye Section -->
@@ -1970,30 +1923,100 @@ function closeFlyer() {
   </div>
 </footer>
 
-<!-- ================= NEWS POPUP ================= -->
+<!-- ================= NEWS POPUP ================= --> 
 <div id="newsPopup" class="news-popup-overlay">
   <div class="news-popup-content">
     <span class="news-popup-close" onclick="closeNewsPopup()">&times;</span>
-    <h3>📰 Latest News</h3>
-    <p>🚫 No news at the moment. Please check back later!</p>
+    
+    <!-- Logo -->
+    <img src="inami.jpg" alt="Innami Logo" class="news-logo">
+
+    <h3>🔥📰 HOT NEWS 📰🔥</h3>
+    <div class="news-text">
+      <p><span class="topic">⚽🎉 Coming Soon: KICK Academy Launch at Innami Education Centre – Kitale 🎉⚽</span></p>
+
+      <p><em>Empowering Girls Through Movement, Mission, and Ministry</em></p>
+
+      <p>We’re delighted to announce the official launch of <span class="name">KICK Academy</span>—a bold new initiative designed to uplift and empower girls through sport, creativity, and faith. This December, Innami Education Centre will host a joyful celebration marking the beginning of a transformative journey for our first cohort of girls.</p>
+
+      <p>
+        <span class="date">📅 December 20th</span><br>
+        🕗 <strong>Time:</strong> 8 AM – 12 Noon<br>
+        👧 <strong>Target Group:</strong> Girls aged 10 to 15 years<br>
+        🙌 <strong>Facilitators:</strong> <span class="name">Emmanuel</span> & <span class="name">Chris</span><br>
+        🎥 <strong>Outreach coordinator:</strong> <span class="name">Meshack M</span>
+      </p>
+
+      <h4>🌟 What to Expect:</h4>
+      <ul>
+        <li><span class="topic">Soccer & Dance Sessions</span> – Energetic, expressive, and full of joy—girls will engage in movement that builds confidence, teamwork, and celebration.</li>
+        <li><span class="topic">Introducing KICK Academy</span> – Learn the heart behind the mission: why we focus on girls, what KICK stands for, and how this program will shape lives.<br> 🎯 First Cohort Selection: 30 girls will be chosen to begin this exciting journey.</li>
+        <li><span class="topic">Bible Inspirations & Crafts</span> – Dive into the story of Gideon and the Midianites—a tale of courage, calling, and divine strength.<br> ✂ Creative crafts will help bring the lesson to life.</li>
+        <li><span class="topic">Snacks & Fun Games</span> – Because every celebration needs laughter, treats, and moments of pure delight.</li>
+      </ul>
+
+      <p><strong>This launch marks more than an event—it’s the beginning of a movement. <span class="name">KICK Academy</span> is here to champion girls, nurture their gifts, and root their growth in faith and fellowship.</strong></p>
+
+      <p><span class="topic">🔥 Come celebrate with us. The future is kicking off! 🔥</span></p>
+
+      <hr>
+
+      <h4>🌟 Coming Soon at Innami Education Centre – Kitale 🌟</h4>
+      <p><span class="topic">Puppet Parables: Stories That Speak to the Heart</span></p>
+      <p>We’re thrilled to announce a joyful new chapter unfolding at Innami Education Centre this January! As part of our creative outreach and discipleship efforts, we invite you to experience the wonder of storytelling through puppetry—where timeless parables come alive with color, movement, and heart.</p>
+
+      <h5>🎭 Puppet Parables Event Series</h5>
+      <ul>
+        <li>
+          <span class="date">📅 January 9th</span> – <span class="topic">The Good Samaritan</span><br>
+          🕒 Time: 3 PM to 4 PM<br>
+          📖 Theme Story: The Good Samaritan<br>
+          👥 Actors: 3<br>
+          🎥 Outreach: <span class="name">Meshack M</span><br>
+          💬 A tale of kindness and compassion that reminds us all to love beyond boundaries.
+        </li>
+        <br>
+        <li>
+          <span class="date">📅 January 16th</span> – <span class="topic">The Fall</span><br>
+          🕒 Time: 3 PM to 4 PM<br>
+          📖 Theme Story: The Fall<br>
+          👥 Actors: 4<br>
+          💬 A powerful retelling of humanity’s first steps and the grace that follows.
+        </li>
+      </ul>
+
+      <p>✨ These events are designed to spark imagination, deepen understanding, and build community among our learners and guests. Whether you're a student, parent, partner, or friend—come witness the Gospel in motion.</p>
+
+      <p><strong>Let’s gather, celebrate, and grow together.<br>
+      See you at Innami! 🎉🔥</strong></p>
+    </div>
   </div>
 </div>
 
 <!-- ================= STYLES ================= -->
 <style>
-/* NEWS link style */
 .news-link {
-  display: block;
+  display: inline-block;
   font-weight: bold;
+  font-size: 20px;
   color: #b71c1c; /* fiery red */
-  margin-top: 6px;
-  transition: color 0.3s ease;
-}
-.news-link:hover {
-  color: #ff5722; /* warm orange hover */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: glowPulse 1.5s infinite;
+  transition: transform 0.2s ease;
 }
 
-/* News Popup overlay (unique) */
+.news-link:hover {
+  transform: scale(1.1); /* pop on hover */
+  color: #ff5722; /* warm orange */
+}
+
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 5px #ff3d00, 0 0 10px #ff5722; }
+  50% { text-shadow: 0 0 20px #ff9800, 0 0 30px #ff5722; }
+  100% { text-shadow: 0 0 5px #ff3d00, 0 0 10px #ff5722; }
+}
+/* Popup overlay */
 .news-popup-overlay {
   display: none;
   position: fixed;
@@ -2004,31 +2027,77 @@ function closeFlyer() {
   justify-content: center;
   align-items: center;
 }
-.news-popup-overlay.active {
-  display: flex;
-}
+.news-popup-overlay.active { display: flex; }
+
+/* Popup content */
 .news-popup-content {
   background: #fff;
-  padding: 20px 25px;
-  border-radius: 14px;
-  max-width: 450px;
-  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  text-align: left;
   position: relative;
-  animation: newsFadeIn 0.3s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease;
+  border: 3px solid #ff0000; /* Hot red border */
+  box-shadow: 0 6px 25px rgba(255,0,0,0.3);
 }
+
+/* Logo */
+.news-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px auto;
+  object-fit: cover;
+  border: 2px solid #ff5722;
+}
+
+/* Close button */
 .news-popup-close {
   position: absolute;
   top: 12px;
   right: 18px;
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 24px;
   cursor: pointer;
-  color: #b71c1c;
+  color: #333;
 }
-.news-popup-close:hover {
-  color: #ff5722;
+.news-popup-close:hover { color: red; }
+
+/* HOT topics */
+.topic {
+  color: #d32f2f;
+  font-weight: bold;
 }
-@keyframes newsFadeIn {
+
+/* Highlight dates */
+.date {
+  background: #ffeb3b;
+  color: #000;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* Warm gradient names */
+.name {
+  background: linear-gradient(45deg, #ff5722, #ff9800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Scroll styling */
+.news-popup-content::-webkit-scrollbar { width: 6px; }
+.news-popup-content::-webkit-scrollbar-thumb {
+  background: #ff5722;
+  border-radius: 10px;
+}
+
+@keyframes fadeIn {
   from {opacity: 0; transform: scale(0.9);}
   to {opacity: 1; transform: scale(1);}
 }
@@ -2045,7 +2114,5 @@ function closeNewsPopup() {
   document.body.style.overflow = "auto";
 }
 </script>
-
-
 </body>
 </html>

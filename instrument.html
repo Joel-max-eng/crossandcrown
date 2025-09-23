@@ -765,10 +765,8 @@ function overlayClose(event, id) {
     <p>
       To support this initiative:
     </p>
-    <ul>
-      <li>Visit our <a href="contact.html" class="text-info">Contact Us page</a></li>
-      <li>📱 Send us a WhatsApp message</li>
-      <li>📧 Drop us an email</li>
+     <ul>
+      <li>Visit our <a href="mentor-form.html" class="text-info">Contact Us page</a></li>
     </ul>
 
     <p>
@@ -1999,7 +1997,6 @@ function closeCertificate() {
         <a href="mentor.html">Become a Mentor</a>
         <a href="resource.html">Resources</a>
         <a href="privacy.html">Privacy & Data Protection Policy</a>
-
         <!-- 🔥 NEWS link -->
         <a href="javascript:void(0)" class="news-link" onclick="openNewsPopup()">🔥 NEWS</a>
       </div>
@@ -2038,30 +2035,100 @@ function closeCertificate() {
   </div>
 </footer>
 
-<!-- ================= NEWS POPUP ================= -->
+<!-- ================= NEWS POPUP ================= --> 
 <div id="newsPopup" class="news-popup-overlay">
   <div class="news-popup-content">
     <span class="news-popup-close" onclick="closeNewsPopup()">&times;</span>
-    <h3>📰 Latest News</h3>
-    <p>🚫 No news at the moment. Please check back later!</p>
+    
+    <!-- Logo -->
+    <img src="inami.jpg" alt="Innami Logo" class="news-logo">
+
+    <h3>🔥📰 HOT NEWS 📰🔥</h3>
+    <div class="news-text">
+      <p><span class="topic">⚽🎉 Coming Soon: KICK Academy Launch at Innami Education Centre – Kitale 🎉⚽</span></p>
+
+      <p><em>Empowering Girls Through Movement, Mission, and Ministry</em></p>
+
+      <p>We’re delighted to announce the official launch of <span class="name">KICK Academy</span>—a bold new initiative designed to uplift and empower girls through sport, creativity, and faith. This December, Innami Education Centre will host a joyful celebration marking the beginning of a transformative journey for our first cohort of girls.</p>
+
+      <p>
+        <span class="date">📅 December 20th</span><br>
+        🕗 <strong>Time:</strong> 8 AM – 12 Noon<br>
+        👧 <strong>Target Group:</strong> Girls aged 10 to 15 years<br>
+        🙌 <strong>Facilitators:</strong> <span class="name">Emmanuel</span> & <span class="name">Chris</span><br>
+        🎥 <strong>Outreach coordinator:</strong> <span class="name">Meshack M</span>
+      </p>
+
+      <h4>🌟 What to Expect:</h4>
+      <ul>
+        <li><span class="topic">Soccer & Dance Sessions</span> – Energetic, expressive, and full of joy—girls will engage in movement that builds confidence, teamwork, and celebration.</li>
+        <li><span class="topic">Introducing KICK Academy</span> – Learn the heart behind the mission: why we focus on girls, what KICK stands for, and how this program will shape lives.<br> 🎯 First Cohort Selection: 30 girls will be chosen to begin this exciting journey.</li>
+        <li><span class="topic">Bible Inspirations & Crafts</span> – Dive into the story of Gideon and the Midianites—a tale of courage, calling, and divine strength.<br> ✂ Creative crafts will help bring the lesson to life.</li>
+        <li><span class="topic">Snacks & Fun Games</span> – Because every celebration needs laughter, treats, and moments of pure delight.</li>
+      </ul>
+
+      <p><strong>This launch marks more than an event—it’s the beginning of a movement. <span class="name">KICK Academy</span> is here to champion girls, nurture their gifts, and root their growth in faith and fellowship.</strong></p>
+
+      <p><span class="topic">🔥 Come celebrate with us. The future is kicking off! 🔥</span></p>
+
+      <hr>
+
+      <h4>🌟 Coming Soon at Innami Education Centre – Kitale 🌟</h4>
+      <p><span class="topic">Puppet Parables: Stories That Speak to the Heart</span></p>
+      <p>We’re thrilled to announce a joyful new chapter unfolding at Innami Education Centre this January! As part of our creative outreach and discipleship efforts, we invite you to experience the wonder of storytelling through puppetry—where timeless parables come alive with color, movement, and heart.</p>
+
+      <h5>🎭 Puppet Parables Event Series</h5>
+      <ul>
+        <li>
+          <span class="date">📅 January 9th</span> – <span class="topic">The Good Samaritan</span><br>
+          🕒 Time: 3 PM to 4 PM<br>
+          📖 Theme Story: The Good Samaritan<br>
+          👥 Actors: 3<br>
+          🎥 Outreach: <span class="name">Meshack M</span><br>
+          💬 A tale of kindness and compassion that reminds us all to love beyond boundaries.
+        </li>
+        <br>
+        <li>
+          <span class="date">📅 January 16th</span> – <span class="topic">The Fall</span><br>
+          🕒 Time: 3 PM to 4 PM<br>
+          📖 Theme Story: The Fall<br>
+          👥 Actors: 4<br>
+          💬 A powerful retelling of humanity’s first steps and the grace that follows.
+        </li>
+      </ul>
+
+      <p>✨ These events are designed to spark imagination, deepen understanding, and build community among our learners and guests. Whether you're a student, parent, partner, or friend—come witness the Gospel in motion.</p>
+
+      <p><strong>Let’s gather, celebrate, and grow together.<br>
+      See you at Innami! 🎉🔥</strong></p>
+    </div>
   </div>
 </div>
 
 <!-- ================= STYLES ================= -->
 <style>
-/* NEWS link style */
 .news-link {
-  display: block;
+  display: inline-block;
   font-weight: bold;
+  font-size: 20px;
   color: #b71c1c; /* fiery red */
-  margin-top: 6px;
-  transition: color 0.3s ease;
-}
-.news-link:hover {
-  color: #ff5722; /* warm orange hover */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: glowPulse 1.5s infinite;
+  transition: transform 0.2s ease;
 }
 
-/* News Popup overlay (unique) */
+.news-link:hover {
+  transform: scale(1.1); /* pop on hover */
+  color: #ff5722; /* warm orange */
+}
+
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 5px #ff3d00, 0 0 10px #ff5722; }
+  50% { text-shadow: 0 0 20px #ff9800, 0 0 30px #ff5722; }
+  100% { text-shadow: 0 0 5px #ff3d00, 0 0 10px #ff5722; }
+}
+/* Popup overlay */
 .news-popup-overlay {
   display: none;
   position: fixed;
@@ -2072,31 +2139,77 @@ function closeCertificate() {
   justify-content: center;
   align-items: center;
 }
-.news-popup-overlay.active {
-  display: flex;
-}
+.news-popup-overlay.active { display: flex; }
+
+/* Popup content */
 .news-popup-content {
   background: #fff;
-  padding: 20px 25px;
-  border-radius: 14px;
-  max-width: 450px;
-  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  text-align: left;
   position: relative;
-  animation: newsFadeIn 0.3s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease;
+  border: 3px solid #ff0000; /* Hot red border */
+  box-shadow: 0 6px 25px rgba(255,0,0,0.3);
 }
+
+/* Logo */
+.news-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px auto;
+  object-fit: cover;
+  border: 2px solid #ff5722;
+}
+
+/* Close button */
 .news-popup-close {
   position: absolute;
   top: 12px;
   right: 18px;
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 24px;
   cursor: pointer;
-  color: #b71c1c;
+  color: #333;
 }
-.news-popup-close:hover {
-  color: #ff5722;
+.news-popup-close:hover { color: red; }
+
+/* HOT topics */
+.topic {
+  color: #d32f2f;
+  font-weight: bold;
 }
-@keyframes newsFadeIn {
+
+/* Highlight dates */
+.date {
+  background: #ffeb3b;
+  color: #000;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* Warm gradient names */
+.name {
+  background: linear-gradient(45deg, #ff5722, #ff9800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Scroll styling */
+.news-popup-content::-webkit-scrollbar { width: 6px; }
+.news-popup-content::-webkit-scrollbar-thumb {
+  background: #ff5722;
+  border-radius: 10px;
+}
+
+@keyframes fadeIn {
   from {opacity: 0; transform: scale(0.9);}
   to {opacity: 1; transform: scale(1);}
 }
@@ -2113,7 +2226,5 @@ function closeNewsPopup() {
   document.body.style.overflow = "auto";
 }
 </script>
-
-
 </body>
 </html>
